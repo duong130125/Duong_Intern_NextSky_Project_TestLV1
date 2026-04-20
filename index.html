@@ -1,0 +1,754 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Umino Theme - Figma to HTML</title>
+
+    <meta
+      name="description"
+      content="Umino Theme perfectly converted from Figma. Pixel perfect and highly responsive layout."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+    <body>
+    <div class="top-announcement-bar">
+      <div class="container">
+        <span id="announcement-text">Black Friday 50% Off! Limited time only:</span> 
+        <span id="countdown-timer">652 days : 05 hour : 59 mins : 52 secs</span>
+        <button class="close-announcement"><i class="fa fa-times"></i></button>
+      </div>
+    </div>
+    <div class="header-top">
+        <div class="header-top-inner">
+          <div class="header-top-left">
+            <span>+222-1800-2628</span>
+            <span>blueskytechcompany@gmail.com</span>
+          </div>
+          <div class="header-top-center">
+            Sign up for 10% off your first order: <a href="#">Sign Up</a>
+          </div>
+          <div class="header-top-right">
+            <a href="#">Our Stores</a>
+            <select>
+              <option>English</option>
+            </select>
+            <select>
+              <option>United States (USD $)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    <header class="header">
+      <div class="container">
+        <div class="mobile-menu-btn mobile-only">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </div>
+        <a href="#" class="header-logo">
+          <img
+            src="assets/images/Logo.svg"
+            alt="Umino Logo"
+            class="header-logo__img"
+          />
+        </a>
+
+        <nav class="header-nav desktop-only">
+          <ul>
+            <li class="has-dropdown">
+              <a href="#" class="active">
+                Home
+                <i
+                  class="fa-solid fa-angle-down nav-caret"
+                  aria-hidden="true"
+                ></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Main demo <span class="nav-badge badge-hot">HOT</span></a></li>
+                <li><a href="#">Skincare</a></li>
+                <li><a href="#">Simple Modern <span class="nav-badge badge-hot">HOT</span></a></li>
+                <li><a href="#">Simple Fashion <span class="nav-badge badge-tiktok">TIKTOK</span></a></li>
+                <li><a href="#">Trendy Style</a></li>
+                <li><a href="#">Minimal Clothings</a></li>
+                <li><a href="#">Men's Luxury <span class="nav-badge badge-hot">HOT</span></a></li>
+                <li><a href="#">Clothing Store</a></li>
+                <li><a href="#">Categories Men's</a></li>
+                <li><a href="#">Unique Watches</a></li>
+                <li><a href="#">Underwear <span class="nav-badge badge-new">NEW</span></a></li>
+                <li><a href="#">RTL Demo</a></li>
+              </ul>
+            </li>
+            <li class="has-mega-menu">
+              <a href="#">
+                Shop
+                <i class="fa-solid fa-angle-down nav-caret" aria-hidden="true"></i>
+              </a>
+              <div class="mega-menu">
+                <div class="mega-menu-col">
+                  <h4>Shop Layouts</h4>
+                  <ul>
+                    <li><a href="#">Filter Left Sidebar</a></li>
+                    <li><a href="#">Filter Right Sidebar</a></li>
+                    <li><a href="#">Filter Dropdown</a></li>
+                    <li><a href="#">Canvas Sidebar</a></li>
+                    <li><a href="#">Full Width</a></li>
+                    <li><a href="#">List View</a></li>
+                    <li><a href="#">Grid 2 Columns</a></li>
+                    <li><a href="#">Grid 3 Columns</a></li>
+                    <li><a href="#">Grid 4 Columns</a></li>
+                  </ul>
+                </div>
+                <div class="mega-menu-col">
+                  <h4>Shop Pages</h4>
+                  <ul>
+                    <li><a href="#">Collection List v1</a></li>
+                    <li><a href="#">Collection List v2</a></li>
+                    <li><a href="#">Load More Button</a></li>
+                    <li><a href="#">Infinite Scrolling</a></li>
+                    <li><a href="#">Pagination Page</a></li>
+                  </ul>
+                </div>
+                <div class="mega-menu-col mega-menu-images">
+                  <div class="mega-img-card">
+                    <img src="assets/images/banner-4.png" alt="Blazers">
+                    <button class="btn mega-btn">Blazers</button>
+                  </div>
+                  <div class="mega-img-card">
+                    <img src="assets/images/banner-5.png" alt="Handbag">
+                    <button class="btn mega-btn">Handbag</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="#">
+                Products
+                <i
+                  class="fa-solid fa-angle-down nav-caret"
+                  aria-hidden="true"
+                ></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Pages
+                <i
+                  class="fa-solid fa-angle-down nav-caret"
+                  aria-hidden="true"
+                ></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Blog
+                <i
+                  class="fa-solid fa-angle-down nav-caret"
+                  aria-hidden="true"
+                ></i>
+              </a>
+            </li>
+            <li><a href="#">Sale</a></li>
+            <li><a href="#">Buy Umino!</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-icons">
+          <a href="#" class="header-icon-item">
+            <img src="assets/icons/search.svg" alt="Search" class="svg-icon" />
+          </a>
+          <a href="#" class="header-icon-item desktop-only">
+            <img src="assets/icons/login.svg" alt="User" class="svg-icon" />
+          </a>
+          <a href="#" class="header-icon-item desktop-only">
+            <img src="assets/icons/clock.svg" alt="Clock" class="svg-icon" />
+          </a>
+          <a href="#" class="header-icon-item desktop-only">
+            <img src="assets/icons/heart.svg" alt="Wishlist" class="svg-icon" />
+            <span class="icon-badge">0</span>
+          </a>
+          <a href="cart.html" class="header-icon-item" id="header-cart-icon">
+            <img src="assets/icons/cart.svg" alt="Cart" class="svg-icon" />
+            <span class="icon-badge" id="cart-badge-header">0</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+            <section class="hero-slider-fw">
+        <div class="hero-slides-wrapper">
+          <div class="hero-slide active" style="background-image: url('assets/images/banner-3.png');">
+            <div class="container hero-container">
+              <div class="hero-content">
+                <h1 class="hero-title">Stylish<br>Top Trending</h1>
+                <p class="hero-subtitle">So soft you don't want to take it off.</p>
+                <a href="#" class="btn btn-dark btn-explore">EXPLORE NOW</a>
+              </div>
+            </div>
+          </div>
+          <div class="hero-slide" style="background-image: url('assets/images/banner-1.png');">
+            <div class="container hero-container">
+              <div class="hero-content">
+                <h1 class="hero-title">Spring<br>Collection '23</h1>
+                <p class="hero-subtitle">Discover our new arrival gardening styles.</p>
+                <a href="#" class="btn btn-dark btn-explore">EXPLORE NOW</a>
+              </div>
+            </div>
+          </div>
+          <div class="hero-slide" style="background-image: url('assets/images/banner-2.png');">
+            <div class="container hero-container">
+              <div class="hero-content">
+                <h1 class="hero-title">Summer<br>Vibe Essentials</h1>
+                <p class="hero-subtitle">Stay cool with our latest summer picks.</p>
+                <a href="#" class="btn btn-dark btn-explore">EXPLORE NOW</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="hero-arrow hero-prev"><i class="fa-solid fa-angle-left"></i></button>
+        <button class="hero-arrow hero-next"><i class="fa-solid fa-angle-right"></i></button>
+        <div class="hero-dots">
+          <span class="dot active" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
+        </div>
+      </section>
+
+      <section class="featured-collections">
+        <div class="container">
+          <h2 class="section-title">Featured Collections</h2>
+          <p class="section-subtitle">
+            Elevate your style with our chic featured collections... where
+            fashion meets fun effortlessly.
+          </p>
+
+          <div class="fc-grid">
+            <div class="fc-card fc-card--tall item-clothing">
+              <img src="assets/images/products-3.png" alt="Clothing" />
+              <a href="#" class="btn">Clothing</a>
+            </div>
+            <div class="fc-card item-sunglasses">
+              <img src="assets/images/products-4.png" alt="Sunglasses" />
+              <a href="#" class="btn">Sunglasses</a>
+            </div>
+            <div class="fc-card item-bags">
+              <img src="assets/images/products-5.png" alt="Bags" />
+              <a href="#" class="btn">Bags</a>
+            </div>
+            <div class="fc-card fc-card--tall item-sneaker">
+              <img src="assets/images/products-6.png" alt="Sneaker" />
+              <a href="#" class="btn">Sneaker</a>
+            </div>
+          </div>
+        </div>
+      
+      <section class="trending-week">
+        <div class="container">
+          <h2 class="section-title">Trending this Week</h2>
+          <div class="trending-tabs">
+            <button class="tab-btn active">TOPS</button>
+            <button class="tab-btn">DRESSES</button>
+            <button class="tab-btn">T-SHIRT</button>
+            <button class="tab-btn">BAGS</button>
+            <button class="tab-btn">SHOES</button>
+          </div>
+          <div class="products-grid-wrapper">
+            <div class="products-grid">
+              <div class="product-card">
+                <div class="product-image-wrap">
+                  <img src="assets/images/products-10.png" alt="Product" />
+                  <button class="btn btn-add-cart add-to-cart-btn" data-id="p5" data-name="Trending Item 1" data-price="130.00" data-image="assets/images/products-10.png">Add To Cart</button>
+                </div>
+                <a href="#" class="product-title">Square Textured Striped</a>
+                <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <div class="product-price">$ 130.00</div>
+                <div class="product-colors">
+                  <div class="color-swatch" style="--swatch: #08382C"></div>
+                  <div class="color-swatch" style="--swatch: #492919"></div>
+                  <div class="color-swatch" style="--swatch: #DFD3C2"></div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-image-wrap">
+                  <img src="assets/images/products-11.png" alt="Product" />
+                  <button class="btn btn-add-cart add-to-cart-btn" data-id="p6" data-name="Trending Item 2" data-price="158.00" data-image="assets/images/products-11.png">Add To Cart</button>
+                </div>
+                <a href="#" class="product-title">Square Textured Striped</a>
+                <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <div class="product-price">$ 158.00</div>
+                <div class="product-colors">
+                  <div class="color-swatch" style="--swatch: #08382C"></div>
+                  <div class="color-swatch" style="--swatch: #492919"></div>
+                  <div class="color-swatch" style="--swatch: #DFD3C2"></div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-image-wrap">
+                  <img src="assets/images/products-12.png" alt="Product" />
+                  <button class="btn btn-add-cart add-to-cart-btn" data-id="p7" data-name="Trending Item 3" data-price="190.00" data-image="assets/images/products-12.png">Add To Cart</button>
+                </div>
+                <a href="#" class="product-title">Square Textured Striped</a>
+                <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <div class="product-price">$ 190.00</div>
+                <div class="product-colors">
+                  <div class="color-swatch" style="--swatch: #08382C"></div>
+                  <div class="color-swatch" style="--swatch: #492919"></div>
+                  <div class="color-swatch" style="--swatch: #DFD3C2"></div>
+                </div>
+              </div>
+              <div class="product-card">
+                <div class="product-image-wrap">
+                  <img src="assets/images/products-13.png" alt="Product" />
+                  <button class="btn btn-add-cart add-to-cart-btn" data-id="p8" data-name="Trending Item 4" data-price="145.00" data-image="assets/images/products-13.png">Add To Cart</button>
+                </div>
+                <a href="#" class="product-title">Square Textured Striped</a>
+                <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half"></i></div>
+                <div class="product-price">$ 145.00</div>
+                <div class="product-colors">
+                  <div class="color-swatch" style="--swatch: #08382C"></div>
+                  <div class="color-swatch" style="--swatch: #492919"></div>
+                  <div class="color-swatch" style="--swatch: #DFD3C2"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+      <section class="banner-grid-3">
+        <div class="container">
+          <div class="banner-grid-inner">
+            <div class="banner-item">
+              <img src="assets/images/banner-4.png" alt="Oversized Shirt">
+              <div class="banner-content">
+                <span class="banner-label">ONLINE EXCLUSIVE</span>
+                <h3 class="banner-title">Oversized Shirt</h3>
+                <a href="#" class="banner-link">SHOP THE LOOK</a>
+              </div>
+            </div>
+            <div class="banner-item">
+              <img src="assets/images/banner-5.png" alt="Unique SS'23">
+              <div class="banner-content">
+                <span class="banner-label">BEST-SELLERS</span>
+                <h3 class="banner-title">Unique SS'23</h3>
+                <a href="#" class="banner-link">SHOP THE LOOK</a>
+              </div>
+            </div>
+            <div class="banner-item">
+              <img src="assets/images/banner-6.png" alt="Autumn Trends">
+              <div class="banner-content">
+                <span class="banner-label">LIMITED EDITION</span>
+                <h3 class="banner-title">Autumn Trends</h3>
+                <a href="#" class="banner-link">SHOP THE LOOK</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <section class="new-arrivals">
+        <div class="container">
+          <div class="section-header-slider">
+            <h2 class="section-title">New Arrivals</h2>
+          </div>
+          <p class="section-subtitle">
+            Here's some of our most popular products people are in love with.
+          </p>
+
+          <div class="products-grid-wrapper">
+            <div class="products-grid" id="new-arrivals-slider">
+            <div class="product-card">
+              <div class="product-image-wrap">
+                <img src="assets/images/products-1.png" alt="Product" />
+                <button class="btn btn-add-cart add-to-cart-btn" data-id="p1" data-name="Square Textured Striped 1" data-price="135.00" data-image="assets/images/products-1.png">
+                  Add To Cart
+                </button>
+              </div>
+              <a href="#" class="product-title">Square Textured Striped 1</a>
+              <div class="product-rating">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i>
+              </div>
+              <div class="product-price">$ 135.00</div>
+              <div class="product-colors">
+                <div class="color-swatch" style="--swatch: #272D43"></div>
+                <div class="color-swatch" style="--swatch: #A93A3A"></div>
+                <div class="color-swatch" style="--swatch: #E1D6C7"></div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image-wrap">
+                <img src="assets/images/products-2.png" alt="Product" />
+                <button class="btn btn-add-cart add-to-cart-btn" data-id="p2" data-name="Square Textured Striped 2" data-price="158.00" data-image="assets/images/products-2.png">
+                  Add To Cart
+                </button>
+              </div>
+              <a href="#" class="product-title">Square Textured Striped 2</a>
+              <div class="product-rating">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-regular fa-star"></i>
+              </div>
+              <div class="product-price">
+                <span class="price-new">$ 158.00</span>
+                <span class="price-old">$ 400.00</span>
+              </div>
+              <div class="product-colors">
+                <div class="color-swatch" style="--swatch: #EEEEEE"></div>
+                <div class="color-swatch" style="--swatch: #D6D6D6"></div>
+                <div class="color-swatch" style="--swatch: #C2CADF"></div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image-wrap">
+                <img src="assets/images/products-7.png" alt="Product" />
+                <button class="btn btn-add-cart add-to-cart-btn" data-id="p3" data-name="Square Textured Striped 3" data-price="135.00" data-image="assets/images/products-7.png">
+                  Add To Cart
+                </button>
+              </div>
+              <a href="#" class="product-title">Square Textured Striped 3</a>
+              <div class="product-rating">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i>
+              </div>
+              <div class="product-price">$ 135.00</div>
+              <div class="product-colors">
+                <div class="color-swatch" style="--swatch: #08382C"></div>
+                <div class="color-swatch" style="--swatch: #492919"></div>
+                <div class="color-swatch" style="--swatch: #DFD3C2"></div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-image-wrap">
+                <img src="assets/images/products-8.png" alt="Product" />
+                <button class="btn btn-add-cart add-to-cart-btn" data-id="p4" data-name="Square Textured Striped 4" data-price="135.00" data-image="assets/images/products-8.png">
+                  Add To Cart
+                </button>
+              </div>
+              <a href="#" class="product-title">Square Textured Striped 4</a>
+              <div class="product-rating">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i>
+              </div>
+              <div class="product-price">$ 135.00</div>
+              <div class="product-colors">
+                <div class="color-swatch" style="--swatch: #08382C"></div>
+                <div class="color-swatch" style="--swatch: #492919"></div>
+                <div class="color-swatch" style="--swatch: #DFD3C2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <section class="customer-say">
+        <div class="container">
+          <h2 class="section-title">Customer Say!</h2>
+          <p class="section-subtitle">Customers love our products and we always strive to please them all.</p>
+          <div class="testimonials-grid">
+            <div class="testi-card">
+              <img src="assets/images/customer_say_1.png" class="testi-avatar" alt="User">
+              <p class="testi-text">A perfect product, it keeps you very warm without over heating. True to size, I couldn't be happier with the purchase... Thank you! 🤗</p>
+              <div class="testi-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <p class="testi-author">Algerie Lionell - Verified Buyer</p>
+            </div>
+            <div class="testi-card">
+              <img src="assets/images/customer_say_2.png" class="testi-avatar" alt="User">
+              <p class="testi-text">Great to be able to order everything I needed from the comfort of my home and the delivery was extremely quick. Recommend.. 🥰</p>
+              <div class="testi-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <p class="testi-author">Algerie Lionell - Verified Buyer</p>
+            </div>
+            <div class="testi-card">
+              <img src="assets/images/customer_say_3.png" class="testi-avatar" alt="User">
+              <p class="testi-text">These are sooo pretty and very comfy. Perfect color well. I love wearing these with a neutral top and Chelsea boots. Wicked cute... 😍</p>
+              <div class="testi-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <p class="testi-author">Algerie Lionell - Verified Buyer</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="shop-by-gram">
+        <div class="container">
+          <h2 class="section-title">Shop by Gram</h2>
+          <p class="section-subtitle">Inspire and let yourself be inspired, from one unique fashion to another.</p>
+          <div class="gram-grid" style="gap: 5px;">
+            <div class="gram-img-wrap">
+              <img src="assets/images/products-17.png" alt="Gram">
+              <div class="gram-overlay">
+                <img src="assets/icons/bag.svg" alt="Bag">
+              </div>
+            </div>
+
+            <div class="gram-img-wrap">
+              <img src="assets/images/products-14.png" alt="Gram">
+              <div class="gram-overlay">
+                <img src="assets/icons/bag.svg" alt="Bag">
+              </div>
+            </div>
+
+            <div class="gram-img-wrap">
+              <img src="assets/images/products-20.png" alt="Gram">
+              <div class="gram-overlay">
+                <img src="assets/icons/bag.svg" alt="Bag">
+              </div>
+            </div>
+
+            <div class="gram-img-wrap">
+              <img src="assets/images/products-16.png" alt="Gram">
+              <div class="gram-overlay">
+                <img src="assets/icons/bag.svg" alt="Bag">
+              </div>
+            </div>
+
+            <div class="gram-img-wrap">
+              <img src="assets/images/products-18.png" alt="Gram">
+              <div class="gram-overlay">
+                <img src="assets/icons/bag.svg" alt="Bag">
+              </div>
+            </div>
+
+            <div class="gram-img-wrap">
+              <img src="assets/images/products-19.png" alt="Gram">
+              <div class="gram-overlay">
+                <img src="assets/icons/bag.svg" alt="Bag">
+              </div>
+            </div>
+        </div>
+      </section>
+</main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-col footer-logo-col">
+            <img
+              src="assets/images/Logo.svg"
+              alt="Umino Logo"
+              class="footer-logo"
+            />
+            <div class="footer-contact">
+              <p>268 St, South New York/NY 98944, United States</p>
+              <p>+222-1800-2628</p>
+              <p>blueskytechcompany@gmail.com</p>
+            </div>
+            <div class="footer-socials">
+              <a href="#"
+                ><img
+                  src="assets/icons/social/instagram.svg"
+                  alt="Instagram"
+                  class="footer-social-icon"
+              /></a>
+              <a href="#"
+                ><img
+                  src="assets/icons/social/tiktok.svg"
+                  alt="TikTok"
+                  class="footer-social-icon"
+              /></a>
+              <a href="#"
+                ><img
+                  src="assets/icons/social/youtube.svg"
+                  alt="YouTube"
+                  class="footer-social-icon"
+              /></a>
+              <a href="#"
+                ><img
+                  src="assets/icons/social/twitter.svg"
+                  alt="Twitter"
+                  class="footer-social-icon"
+              /></a>
+              <a href="#"
+                ><img
+                  src="assets/icons/social/facebook.svg"
+                  alt="Facebook"
+                  class="footer-social-icon"
+              /></a>
+            </div>
+            <div class="follow-shop">
+              <div class="icon-wrap">
+                <img
+                  src="assets/icons/icon.svg"
+                  alt="Heart"
+                />
+              </div>
+              <span class="follow-shop__label">
+                Follow on
+                <a href="#" class="follow-shop__logo"
+                  ><img src="assets/images/Logo_shop.svg" alt="Shop" />
+                </a>
+              </span>
+            </div>
+          </div>
+
+          <div class="footer-col accordion">
+            <h4 class="footer-title">Hot Categories</h4>
+            <ul class="footer-links">
+              <li><a href="#">Special Offers</a></li>
+              <li><a href="#">Performance</a></li>
+              <li><a href="#">T-shirts</a></li>
+              <li><a href="#">Underwear</a></li>
+              <li><a href="#">Top Brands</a></li>
+              <li><a href="#">Online Exclusive</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col accordion active">
+            <h4 class="footer-title">Customer Service</h4>
+            <ul class="footer-links">
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Refund Policy</a></li>
+              <li><a href="#">Shipping & Return</a></li>
+              <li><a href="#">Term & Conditions</a></li>
+              <li><a href="#">Advanced Search</a></li>
+              <li><a href="#">Theme FAQs</a></li>
+              <li><a href="#">Store Locations</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col accordion active">
+            <h4 class="footer-title">Sign Up To Newsletter</h4>
+            <div class="footer-links">
+              <p class="footer-newsletter-desc">
+                Enter your email address to get $10 off your first order and
+                free shipping. Updates information on Sales and Offers.
+              </p>
+              <div class="newsletter-form">
+                <input type="email" placeholder="Enter your email..." />
+                <button class="btn btn-dark">SUBSCRIBE</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-selectors">
+            <select>
+              <option>English</option>
+            </select>
+            <select>
+              <option>United States (USD $)</option>
+            </select>
+          </div>
+          <div>&copy; 2024 Umino Store. All Rights Reserved.</div>
+          <div class="payment-icons">
+            <img src="assets/images/payment-1.png" alt="Visa" />
+            <img src="assets/images/payment-7.png" alt="PayPal" />
+            <img src="assets/images/payment-2.png" alt="Mastercard" />
+            <img src="assets/images/payment-3.png" alt="Discover" />
+            <img src="assets/images/payment-4.png" alt="Western Union" />
+            <img src="assets/images/payment-5.png" alt="Amex" />
+            <img src="assets/images/payment-6.png" alt="Cirrus" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <nav class="mobile-bottom-nav">
+      <a href="#" class="nav-item active">
+        <div class="nav-icon-wrap">
+          <img src="assets/icons/home.svg" alt="Home" class="nav-icon" />
+        </div>
+        <span>Home</span>
+      </a>
+      <a href="#" class="nav-item">
+        <div class="nav-icon-wrap">
+          <img src="assets/icons/shop.svg" alt="Shop" class="nav-icon" />
+        </div>
+        <span>Shop</span>
+      </a>
+      <a href="#" class="nav-item">
+        <div class="nav-icon-wrap">
+          <img src="assets/icons/login.svg" alt="Account" class="nav-icon" />
+        </div>
+        <span>Account</span>
+      </a>
+      <a href="#" class="nav-item">
+        <div class="nav-icon-wrap">
+          <img src="assets/icons/heart.svg" alt="Wishlist" class="nav-icon" />
+          <span class="icon-badge">0</span>
+        </div>
+        <span>Wishlist</span>
+      </a>
+      <a href="cart.html" class="nav-item">
+        <div class="nav-icon-wrap">
+          <img src="assets/icons/cart.svg" alt="Cart" class="nav-icon" />
+          <span class="icon-badge" id="cart-badge-mobile">0</span>
+        </div>
+        <span>Cart</span>
+      </a>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    <!-- Mobile Menu Wrapper -->
+    <div class="mobile-menu-wrapper" id="mobileMenuWrapper">
+      <div class="mobile-menu-header">
+        <h4>Menu</h4>
+        <button class="mobile-menu-close" id="mobileMenuClose"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <ul class="mobile-menu-list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Pages</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Sale</a></li>
+        <li><a href="#">Buy Umino!</a></li>
+      </ul>
+    </div>
+
+    <script src="js/main.js"></script>
+      <!-- Mini Cart Drawer -->
+    <div class="mini-cart-overlay" id="miniCartOverlay"></div>
+    <aside class="mini-cart-drawer" id="miniCartDrawer">
+      <div class="mini-cart-header">
+        <h4>Shopping Cart</h4>
+        <button class="mini-cart-close" id="miniCartClose"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="mini-cart-promo">
+        <p>Spend  more and get <strong>FREE SHIPPING!</strong></p>
+      </div>
+      <div class="mini-cart-items" id="miniCartItems">
+        <!-- JS rendered items -->
+      </div>
+      <div class="mini-cart-footer">
+        <div class="mini-cart-subtotal">
+          <span>Subtotal:</span>
+          <span id="miniCartSubtotal">.00</span>
+        </div>
+        <label class="terms-label">
+          <input type="checkbox" id="agreeTerms"> I agree with the <a href="#">Terms and conditions</a>
+        </label>
+        <a href="cart.html" class="btn btn-light btn-block btn-view-cart">VIEW CART</a>
+        <button class="btn btn-dark btn-block btn-checkout">CHECKOUT</button>
+      </div>
+    </aside>
+</body>
+</html>
+
+
+
+
+
+
+
