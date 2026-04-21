@@ -91,12 +91,11 @@
               </ul>
             </li>
             <li class="has-mega-menu">
-              <a href="#">
+              <a href="#" class="nav-link-shop">
                 Shop
                 <i class="fa-solid fa-angle-down nav-caret" aria-hidden="true"></i>
               </a>
               <div class="mega-menu">
-                <!-- <div class="mega-container"> -->
                   <div class="mega-menu-col">
                       <h4>Shop Layouts</h4>
                     <ul>
@@ -131,7 +130,6 @@
                     <button class="btn mega-btn">Handbag</button>
                   </div>
                 </div>
-                <!-- </div> -->
               </div>
             </li>
             <li>
@@ -709,22 +707,68 @@
         <h4>Shopping Cart</h4>
         <button class="mini-cart-close" id="miniCartClose"><i class="fa-solid fa-xmark"></i></button>
       </div>
-      <div class="mini-cart-promo">
-        <p>Spend  more and get <strong>FREE SHIPPING!</strong></p>
+
+      <div class="mini-cart-shipping">
+        <div class="shipping-progress-container">
+          <div class="shipping-progress-bar" id="shippingProgressBar">
+            <div class="shipping-icon">
+              <!-- Using carship.svg as truck icon -->
+              <img src="assets/icons/carship.svg" alt="truck">
+            </div>
+          </div>
+        </div>
+        <p class="shipping-text">Spend <span id="shippingRemaining">$1000.00</span> more and get <strong class="free-ship-label">FREE SHIPPING!</strong></p>
       </div>
+
+      <div class="mini-cart-notification">
+        <div class="notification-content">
+          <img src="assets/icons/fire.svg" alt="fire" class="fire-icon">
+          <span>Products are limited, checkout within <strong id="checkoutTimer">1m43s</strong></span>
+        </div>
+      </div>
+
       <div class="mini-cart-items" id="miniCartItems">
         <!-- JS rendered items -->
       </div>
+
       <div class="mini-cart-footer">
-        <div class="mini-cart-subtotal">
-          <span>Subtotal:</span>
-          <span id="miniCartSubtotal">.00</span>
+        <div class="mini-cart-footer-icons">
+          <div class="footer-icon-item">
+            <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.8642 1.18519V0.691358C10.8642 0.296296 10.5679 0 10.1728 0C9.77778 0 9.48148 0.395062 9.48148 0.691358V1.08642H5.03704V0.691358C5.03704 0.395062 4.74074 0 4.34568 0C3.95062 0 3.65432 0.395062 3.65432 0.691358V1.18519C1.28395 1.38272 0 2.96296 0 5.4321V11.6543C0 14.4198 1.58025 16 4.34568 16H10.1728C12.9383 16 14.5185 14.4198 14.5185 11.6543V5.4321C14.5185 2.96296 13.2346 1.38272 10.8642 1.18519ZM4.34568 3.55556C4.64198 3.55556 5.03704 3.25926 5.03704 2.8642V2.46914H9.48148V2.8642C9.48148 3.25926 9.87654 3.55556 10.1728 3.55556C10.4691 3.55556 10.8642 3.25926 10.8642 2.8642V2.46914C12.4444 2.66667 13.1358 3.65432 13.1358 5.4321V11.6543C13.1358 13.7284 12.1481 14.6173 10.1728 14.6173H4.34568C2.27161 14.6173 1.38272 13.6296 1.38272 11.6543V5.33333C1.38272 3.55556 2.07407 2.5679 3.65432 2.37037V2.76543C3.65432 3.25926 3.95062 3.55556 4.34568 3.55556Z" fill="#111111"/>
+            <path d="M4.34565 8.00015H10.1728C10.4691 8.00015 10.8642 7.70385 10.8642 7.30879C10.8642 6.91373 10.4691 6.61743 10.1728 6.61743H4.34565C3.95059 6.61743 3.6543 6.91373 3.6543 7.30879C3.6543 7.70385 4.04936 8.00015 4.34565 8.00015Z" fill="#111111"/>
+            <path d="M7.30862 10.2715H4.34565C3.95059 10.2715 3.6543 10.5678 3.6543 10.9628C3.6543 11.3579 4.04936 11.6542 4.34565 11.6542H7.30862C7.60491 11.6542 7.99998 11.3579 7.99998 10.9628C7.99998 10.5678 7.60491 10.2715 7.30862 10.2715Z" fill="#111111"/>
+            </svg>
+          </div>
+          <div class="footer-icon-separator"></div>
+          <div class="footer-icon-item">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.625 10.375C8.625 10.0298 8.34519 9.75 8 9.75C7.65481 9.75 7.375 10.0298 7.375 10.375V12.875C7.375 13.2202 7.65481 13.5 8 13.5C8.34519 13.5 8.625 13.2202 8.625 12.875V10.375Z" fill="#111111"/>
+            <path d="M1.75 9.75C1.40481 9.75 1.125 10.0298 1.125 10.375V12.875C1.125 14.5981 2.52688 16 4.25 16H11.75C13.4732 16 14.875 14.5981 14.875 12.875V10.375C14.875 10.0298 14.5952 9.75 14.25 9.75C13.9048 9.75 13.625 10.0298 13.625 10.375V12.875C13.625 13.9089 12.7839 14.75 11.75 14.75H4.25C3.21613 14.75 2.375 13.9089 2.375 12.875V10.375C2.375 10.0298 2.09519 9.75 1.75 9.75Z" fill="#111111"/>
+            <path d="M1.875 8.75H14.125C15.1589 8.75 16 7.90887 16 6.875V5.625C16 4.59113 15.1589 3.75 14.125 3.75H12.0387C12.2521 3.38197 12.375 2.95519 12.375 2.5C12.375 1.1215 11.2535 0 9.875 0C9.12884 0 8.45847 0.329 8 0.849031C7.54153 0.329 6.87116 0 6.125 0C4.7465 0 3.625 1.1215 3.625 2.5C3.625 2.95519 3.74787 3.38197 3.96134 3.75H1.875C0.841125 3.75 0 4.59113 0 5.625V6.875C0 7.90887 0.841125 8.75 1.875 8.75ZM9.875 1.25C10.5642 1.25 11.125 1.81075 11.125 2.5C11.125 3.18925 10.5642 3.75 9.875 3.75H8.625V2.5C8.625 1.81075 9.18575 1.25 9.875 1.25ZM4.875 2.5C4.875 1.81075 5.43575 1.25 6.125 1.25C6.81425 1.25 7.375 1.81075 7.375 2.5V3.75H6.125C5.43575 3.75 4.875 3.18925 4.875 2.5ZM1.25 5.625C1.25 5.28038 1.53038 5 1.875 5H7.375V5.625C7.375 5.97019 7.65481 6.25 8 6.25C8.34519 6.25 8.625 5.97019 8.625 5.625V5H14.125C14.4696 5 14.75 5.28038 14.75 5.625V6.875C14.75 7.21962 14.4696 7.5 14.125 7.5H1.875C1.53038 7.5 1.25 7.21962 1.25 6.875V5.625Z" fill="#111111"/>
+            </svg>
+          </div>
+          <div class="footer-icon-separator"></div>
+          <div class="footer-icon-item">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.2447 2.65861L9.37764 0.435045C8.3142 -0.145015 6.76737 -0.145015 5.8006 0.435045L1.93353 2.65861C0.870091 3.23867 0 4.68882 0 5.94562V10.1027C0 11.3595 0.870091 12.713 1.93353 13.3897L5.8006 15.6133C6.28399 15.9033 6.96073 16 7.63746 16C8.3142 16 8.89426 15.9033 9.47432 15.6133L13.3414 13.3897C14.4048 12.8097 15.2749 11.3595 15.2749 10.1027V5.84894C15.1782 4.68882 14.3082 3.23867 13.2447 2.65861ZM6.28399 1.49849C6.57402 1.30514 7.0574 1.20846 7.54079 1.20846C8.02417 1.20846 8.41088 1.30514 8.79758 1.49849L12.6647 3.72205C12.9547 3.81873 13.148 4.10876 13.3414 4.39879L11.2145 5.65559L5.22054 2.07855L6.28399 1.49849ZM2.41692 3.62538L4.06042 2.65861L10.0544 6.13897L7.54079 7.6858L1.6435 4.30212C1.83686 4.01208 2.12689 3.81873 2.41692 3.62538ZM2.41692 12.2296C1.74018 11.8429 1.06344 10.7795 1.06344 10.006V5.84894C1.06344 5.65559 1.06344 5.46224 1.16012 5.26888L6.96073 8.65257V14.6465C6.6707 14.6465 6.47734 14.5498 6.28399 14.4532L2.41692 12.2296ZM14.0181 10.006C14.0181 10.7795 13.4381 11.8429 12.6647 12.2296L8.79758 14.3565C8.60423 14.4532 8.41088 14.5498 8.12085 14.5498V8.65257L10.6344 7.20242V8.84592C10.6344 9.13595 10.9245 9.42598 11.2145 9.42598C11.5045 9.42598 11.7946 9.13595 11.7946 8.84592V6.52568L13.9215 5.26888C13.9215 5.55891 14.0181 5.75227 14.0181 5.84894V10.006Z" fill="#111111"/>
+            </svg>
+          </div>
         </div>
+
+        <div class="mini-cart-subtotal">
+          <span class="subtotal-label">Subtotal:</span>
+          <span id="miniCartSubtotal" class="subtotal-value">$0.00</span>
+        </div>
+        
         <label class="terms-label">
-          <input type="checkbox" id="agreeTerms"> I agree with the <a href="#">Terms and conditions</a>
+          <input type="checkbox" id="agreeTerms"> <span>I agree with the <a href="#">terms and conditions</a></span>
         </label>
-        <a href="cart.html" class="btn btn-light btn-block btn-view-cart">VIEW CART</a>
-        <button class="btn btn-dark btn-block btn-checkout">CHECKOUT</button>
+        
+        <div class="mini-cart-actions">
+          <a href="cart.html" class="btn-mini-cart btn-view-cart">VIEW CART</a>
+          <button class="btn-mini-cart btn-checkout">CHECKOUT</button>
+        </div>
       </div>
     </aside>
 </body>

@@ -204,6 +204,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const miniCartItemsCont = document.getElementById("miniCartItems");
   const miniCartSubtotalTxt = document.getElementById("miniCartSubtotal");
   const headerCartIcon = document.getElementById("header-cart-icon");
+  const shippingProgressBar = document.getElementById("shippingProgressBar");
+  const shippingRemainingTxt = document.getElementById("shippingRemaining");
+  const checkoutTimerTxt = document.getElementById("checkoutTimer");
 
   const toggleMiniCart = (open = null) => {
     if (!miniCartDrawer || !miniCartOverlay) return;
@@ -245,18 +248,30 @@ document.addEventListener("DOMContentLoaded", () => {
       total += item.price * item.quantity;
       html += `
         <div class="mini-cart-item">
-          <div class="mci-img"><img src="${item.image}" alt="${item.name}"></div>
+          <div class="mci-img">
+            <img src="${item.image}" alt="${item.name}">
+          </div>
           <div class="mci-info">
             <div class="mci-name">${item.name}</div>
+            <div class="mci-details">Black / M</div>
             <div class="mci-price">$${item.price.toFixed(2)}</div>
-            <div class="mci-controls">
+            
+            <div class="mci-controls-row">
               <div class="qty-control">
                 <button class="qty-btn dec" data-id="${item.id}">-</button>
-                <span class="qty-val">${item.quantity}</span>
+                <div class="qty-val">${item.quantity}</div>
                 <button class="qty-btn inc" data-id="${item.id}">+</button>
               </div>
-              <button class="mci-remove" data-id="${item.id}"><i class="fa-solid fa-trash-can"></i></button>
             </div>
+          </div>
+          
+          <div class="mci-actions">
+            <button class="mci-action-btn remove" data-id="${item.id}" title="Remove">
+              <img src="assets/icons/delete.svg" alt="delete" style="width: 16px;">
+            </button>
+            <button class="mci-action-btn edit" data-id="${item.id}" title="Edit">
+              <img src="assets/icons/edit.svg" alt="edit" style="width: 16px;">
+            </button>
           </div>
         </div>
       `;
@@ -265,7 +280,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (miniCartSubtotalTxt)
       miniCartSubtotalTxt.textContent = `$${total.toFixed(2)}`;
 
-    // Add listeners to new buttons
+    updateShippingProgress(total);
+    startCheckoutTimer();
+
+    // Add listeners to new buttons (inc/dec)
     miniCartItemsCont.querySelectorAll(".qty-btn").forEach((btn) => {
       btn.addEventListener("click", () => {
         const id = btn.getAttribute("data-id");
@@ -279,15 +297,52 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    miniCartItemsCont.querySelectorAll(".mci-remove").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const id = btn.getAttribute("data-id");
-        let cart = getCart().filter((i) => i.id !== id);
-        saveCart(cart);
-        renderMiniCart();
-        updateCartBadge();
+    // Add listeners for removal
+    miniCartItemsCont
+      .querySelectorAll(".mci-action-btn.remove")
+      .forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const id = btn.getAttribute("data-id");
+          let cart = getCart().filter((i) => i.id !== id);
+          saveCart(cart);
+          renderMiniCart();
+          updateCartBadge();
+        });
       });
-    });
+  };
+
+  const updateShippingProgress = (total) => {
+    if (!shippingProgressBar || !shippingRemainingTxt) return;
+    const target = 1000;
+    const percent = Math.min((total / target) * 100, 100);
+    const remaining = Math.max(target - total, 0);
+
+    shippingProgressBar.style.width = `${percent}%`;
+    shippingRemainingTxt.textContent = `$${remaining.toFixed(2)}`;
+  };
+
+  let checkoutInterval;
+  const startCheckoutTimer = () => {
+    if (!checkoutTimerTxt || checkoutInterval) return;
+
+    let time = 103; // 1m43s = 103 seconds
+    const updateDisplay = () => {
+      const m = Math.floor(time / 60);
+      const s = time % 60;
+      checkoutTimerTxt.textContent = `${m}m${s.toString().padStart(2, "0")}s`;
+    };
+
+    updateDisplay();
+    checkoutInterval = setInterval(() => {
+      time--;
+      if (time <= 0) {
+        clearInterval(checkoutInterval);
+        checkoutInterval = null;
+        checkoutTimerTxt.textContent = "EXPIRED";
+        return;
+      }
+      updateDisplay();
+    }, 1000);
   };
 
   // Global "Add to Cart" listener
