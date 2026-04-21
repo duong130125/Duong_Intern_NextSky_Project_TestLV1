@@ -25,7 +25,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const timerDisplay = document.getElementById("countdown-timer");
 
   if (topBarClose && topBar) {
-    topBarClose.addEventListener("click", () => topBar.style.display = "none");
+    topBarClose.addEventListener(
+      "click",
+      () => (topBar.style.display = "none"),
+    );
   }
 
   const startCountdown = () => {
@@ -43,11 +46,13 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+      );
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      timerDisplay.textContent = `${days} days : ${hours.toString().padStart(2, '0')} hours : ${minutes.toString().padStart(2, '0')} mins : ${seconds.toString().padStart(2, '0')} secs`;
+      timerDisplay.textContent = `${days} days : ${hours.toString().padStart(2, "0")} hours : ${minutes.toString().padStart(2, "0")} mins : ${seconds.toString().padStart(2, "0")} secs`;
     };
 
     updateTimer();
@@ -80,14 +85,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const nextSlide = () => goToSlide(currentSlide + 1);
     const prevSlide = () => goToSlide(currentSlide - 1);
 
-    if (nextBtn) nextBtn.addEventListener("click", () => {
-      nextSlide();
-      resetInterval();
-    });
-    if (prevBtn) prevBtn.addEventListener("click", () => {
-      prevSlide();
-      resetInterval();
-    });
+    if (nextBtn)
+      nextBtn.addEventListener("click", () => {
+        nextSlide();
+        resetInterval();
+      });
+    if (prevBtn)
+      prevBtn.addEventListener("click", () => {
+        prevSlide();
+        resetInterval();
+      });
 
     dots.forEach((dot, index) => {
       dot.addEventListener("click", () => {
@@ -98,10 +105,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const resetInterval = () => {
       clearInterval(slideInterval);
-      slideInterval = setInterval(nextSlide, 5000);
+      // slideInterval = setInterval(nextSlide, 5000); // Disabled auto-sliding
     };
 
-    slideInterval = setInterval(nextSlide, 5000);
+    // slideInterval = setInterval(nextSlide, 5000); // Disabled auto-sliding
   };
 
   heroSlider();
@@ -115,18 +122,21 @@ document.addEventListener("DOMContentLoaded", () => {
   if (trendingGrid && trendingTabs.length > 0) {
     const products = trendingGrid.querySelectorAll(".product-card");
 
-    trendingTabs.forEach(tab => {
+    trendingTabs.forEach((tab) => {
       tab.addEventListener("click", () => {
         const category = tab.textContent.trim().toUpperCase();
-        
-        trendingTabs.forEach(t => t.classList.remove("active"));
+
+        trendingTabs.forEach((t) => t.classList.remove("active"));
         tab.classList.add("active");
 
         trendingGrid.style.opacity = "0";
-        
+
         setTimeout(() => {
-          products.forEach(product => {
-            if (category === "ALL" || product.getAttribute("data-category") === category) {
+          products.forEach((product) => {
+            if (
+              category === "ALL" ||
+              product.getAttribute("data-category") === category
+            ) {
               product.style.display = "block";
             } else {
               product.style.display = "none";
@@ -149,7 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let currentIndex = 0;
     const cards = grid.querySelectorAll(".product-card");
-    
+
     const getVisibleCount = () => {
       if (window.innerWidth >= 1024) return 4;
       if (window.innerWidth >= 768) return 2;
@@ -197,7 +207,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const toggleMiniCart = (open = null) => {
     if (!miniCartDrawer || !miniCartOverlay) return;
-    const shouldOpen = open !== null ? open : !miniCartDrawer.classList.contains("active");
+    const shouldOpen =
+      open !== null ? open : !miniCartDrawer.classList.contains("active");
     if (shouldOpen) {
       miniCartDrawer.classList.add("active");
       miniCartOverlay.classList.add("active");
@@ -208,22 +219,29 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  if (headerCartIcon) headerCartIcon.addEventListener("click", (e) => { e.preventDefault(); toggleMiniCart(true); });
-  if (miniCartClose) miniCartClose.addEventListener("click", () => toggleMiniCart(false));
-  if (miniCartOverlay) miniCartOverlay.addEventListener("click", () => toggleMiniCart(false));
+  if (headerCartIcon)
+    headerCartIcon.addEventListener("click", (e) => {
+      e.preventDefault();
+      toggleMiniCart(true);
+    });
+  if (miniCartClose)
+    miniCartClose.addEventListener("click", () => toggleMiniCart(false));
+  if (miniCartOverlay)
+    miniCartOverlay.addEventListener("click", () => toggleMiniCart(false));
 
   const renderMiniCart = () => {
     if (!miniCartItemsCont) return;
     const cart = getCart();
     if (cart.length === 0) {
-      miniCartItemsCont.innerHTML = '<div class="empty-cart-msg">Your cart is empty.</div>';
+      miniCartItemsCont.innerHTML =
+        '<div class="empty-cart-msg">Your cart is empty.</div>';
       if (miniCartSubtotalTxt) miniCartSubtotalTxt.textContent = "$0.00";
       return;
     }
 
     let html = "";
     let total = 0;
-    cart.forEach(item => {
+    cart.forEach((item) => {
       total += item.price * item.quantity;
       html += `
         <div class="mini-cart-item">
@@ -244,14 +262,15 @@ document.addEventListener("DOMContentLoaded", () => {
       `;
     });
     miniCartItemsCont.innerHTML = html;
-    if (miniCartSubtotalTxt) miniCartSubtotalTxt.textContent = `$${total.toFixed(2)}`;
+    if (miniCartSubtotalTxt)
+      miniCartSubtotalTxt.textContent = `$${total.toFixed(2)}`;
 
     // Add listeners to new buttons
-    miniCartItemsCont.querySelectorAll(".qty-btn").forEach(btn => {
+    miniCartItemsCont.querySelectorAll(".qty-btn").forEach((btn) => {
       btn.addEventListener("click", () => {
         const id = btn.getAttribute("data-id");
         let cart = getCart();
-        const item = cart.find(i => i.id === id);
+        const item = cart.find((i) => i.id === id);
         if (btn.classList.contains("inc")) item.quantity++;
         else if (item.quantity > 1) item.quantity--;
         saveCart(cart);
@@ -260,10 +279,10 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    miniCartItemsCont.querySelectorAll(".mci-remove").forEach(btn => {
+    miniCartItemsCont.querySelectorAll(".mci-remove").forEach((btn) => {
       btn.addEventListener("click", () => {
         const id = btn.getAttribute("data-id");
-        let cart = getCart().filter(i => i.id !== id);
+        let cart = getCart().filter((i) => i.id !== id);
         saveCart(cart);
         renderMiniCart();
         updateCartBadge();
@@ -282,7 +301,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const image = btn.getAttribute("data-image");
 
       let cart = getCart();
-      const existing = cart.find(i => i.id === id);
+      const existing = cart.find((i) => i.id === id);
       if (existing) existing.quantity++;
       else cart.push({ id, name, price, image, quantity: 1 });
 
@@ -307,11 +326,13 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   if (mobileMenuBtn) mobileMenuBtn.addEventListener("click", toggleMobileMenu);
-  if (mobileMenuClose) mobileMenuClose.addEventListener("click", toggleMobileMenu);
-  if (mobileMenuOverlay) mobileMenuOverlay.addEventListener("click", toggleMobileMenu);
+  if (mobileMenuClose)
+    mobileMenuClose.addEventListener("click", toggleMobileMenu);
+  if (mobileMenuOverlay)
+    mobileMenuOverlay.addEventListener("click", toggleMobileMenu);
 
   const accordions = document.querySelectorAll(".footer-col.accordion");
-  accordions.forEach(acc => {
+  accordions.forEach((acc) => {
     const title = acc.querySelector(".footer-title");
     if (title) {
       title.addEventListener("click", () => {
