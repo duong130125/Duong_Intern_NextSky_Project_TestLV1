@@ -4,10 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const cartTable = document.getElementById("cartTable");
   const cartSubtotal = document.getElementById("cartSubtotal");
   const cartTotal = document.getElementById("cartTotal");
-
   const renderCart = () => {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
     if (cart.length === 0) {
       if (cartTable) cartTable.style.display = "none";
       if (emptyCartMessage) emptyCartMessage.style.display = "block";
@@ -15,13 +13,10 @@ document.addEventListener("DOMContentLoaded", () => {
       if (cartTotal) cartTotal.textContent = "$ 0.00";
       return;
     }
-
     if (cartTable) cartTable.style.display = "table";
     if (emptyCartMessage) emptyCartMessage.style.display = "none";
-
     let html = "";
     let total = 0;
-
     cart.forEach((item, index) => {
       const itemTotal = item.price * item.quantity;
       total += itemTotal;
@@ -50,17 +45,13 @@ document.addEventListener("DOMContentLoaded", () => {
         </tr>
       `;
     });
-
     if (cartTableBody) cartTableBody.innerHTML = html;
     if (cartSubtotal) cartSubtotal.textContent = "$ " + total.toFixed(2);
     if (cartTotal) cartTotal.textContent = "$ " + total.toFixed(2);
   };
-
   if (cartTableBody) {
     cartTableBody.addEventListener("click", (e) => {
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-      // Remove button
       if (e.target.closest(".btn-remove")) {
         const id = e.target.closest(".btn-remove").getAttribute("data-id");
         cart = cart.filter((item) => item.id !== id);
@@ -68,8 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
         renderCart();
         updateCartBadge(); // from main.js if accessible, or re-run
       }
-
-      // Increase qty
       if (e.target.classList.contains("btn-inc")) {
         const id = e.target.getAttribute("data-id");
         const item = cart.find((i) => i.id === id);
@@ -80,8 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
           updateCartBadge();
         }
       }
-
-      // Decrease qty
       if (e.target.classList.contains("btn-dec")) {
         const id = e.target.getAttribute("data-id");
         const item = cart.find((i) => i.id === id);
@@ -93,7 +80,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
     });
-
     cartTableBody.addEventListener("change", (e) => {
       if (e.target.classList.contains("qty-input")) {
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -112,8 +98,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
     });
-
-    // Helper to update badge if main.js function isn't globally available here
     const updateCartBadge = () => {
       const cart = JSON.parse(localStorage.getItem("cart")) || [];
       const totalQty = cart.reduce((sum, item) => sum + item.quantity, 0);
@@ -122,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (badgeHeader) badgeHeader.textContent = totalQty;
       if (badgeMobile) badgeMobile.textContent = totalQty;
     };
-
     renderCart();
   }
 });
+

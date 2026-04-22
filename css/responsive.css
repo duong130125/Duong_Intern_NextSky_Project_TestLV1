@@ -15,11 +15,9 @@
       "clothing sneaker"
       "sunglasses sneaker";
   }
-
   .fc-card {
     min-height: 0;
   }
-
   .item-clothing {
     grid-area: clothing;
   }
@@ -32,11 +30,9 @@
   .item-sneaker {
     grid-area: sneaker;
   }
-
   .item-sneaker {
     min-height: clamp(220px, 45vw, 320px);
   }
-
   .fc-card img {
     height: 100%;
   }
@@ -47,12 +43,10 @@
     grid-template-columns: 1fr 1fr;
   }
 }
-
 @media (max-width: 768px) {
   :root {
     --container-padding: 15px;
   }
-  
   h2.section-title {
     font-size: 24px;
   }
@@ -62,16 +56,12 @@
     line-height: 1.5;
     padding: 0 10px;
   }
-
-  /* --- Hide Announcement & Header Top on Mobile --- */
   .top-announcement-bar {
     display: none !important;
   }
   .header-top {
     display: none !important;
   }
-  
-  /* --- Mobile Header --- */
   .header {
     padding: 0;
     height: 60px;
@@ -118,8 +108,6 @@
   .header-icon-item .svg-icon {
     height: 18px;
   }
-  
-  /* --- Hero Slider --- */
   .hero-slider-fw {
     height: 480px;
   }
@@ -165,39 +153,31 @@
     text-align: center;
     text-transform: uppercase;
   }
-  
   .product-image-wrap .add-to-cart-btn {
     display: none !important;
   }
-  
   .product-sale-bar {
     display: flex !important;
     justify-content: flex-start !important;
   }
-  
   .product-action-icons {
     display: flex !important;
     right: 8px !important;
     padding-top: 0 !important;
     margin-top: -7px !important;
   }
-  
   .desktop-badge {
     display: none !important;
   }
-  
   .mobile-badges {
     display: block !important;
   }
-
   .hero-dots {
     bottom: 25px;
   }
   .hero-arrow {
     display: none; 
   }
-
-  /* --- Shared Slider Nav Buttons (mobile) --- */
   .slider-nav, .trending-nav {
     display: flex;
     justify-content: center;
@@ -223,8 +203,6 @@
     background: #f5f5f5;
     border-color: #ddd;
   }
-
-  /* --- Trending Week Slider --- */
   .trending-week {
     padding: 40px 0;
   }
@@ -245,8 +223,6 @@
     margin-bottom: 0;
     text-align: left;
   }
-
-  /* --- New Arrivals Slider --- */
   .new-arrivals {
     padding: 40px 0;
   }
@@ -264,8 +240,6 @@
     margin-bottom: 0;
     text-align: left;
   }
-
-  /* --- Customer Say Slider --- */
   .customer-say {
     padding: 40px 0;
   }
@@ -296,8 +270,6 @@
     box-shadow: 0 2px 12px rgba(0,0,0,0.04);
     box-sizing: border-box;
   }
-
-  /* --- Shop by Gram Swipe --- */
   .shop-by-gram {
     padding: 40px 0;
   }
@@ -320,13 +292,10 @@
     flex: 0 0 45vw;
     scroll-snap-align: start;
   }
-
-  /* --- Footer --- */
   .footer-top {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-  
   .footer-col.accordion .footer-title {
     display: flex;
     justify-content: space-between;
@@ -351,15 +320,12 @@
   .footer-col.accordion.active .footer-links {
     display: block;
   }
-
   .footer-bottom {
     flex-direction: column;
     gap: 15px;
     text-align: center;
     padding-bottom: 80px; 
   }
-
-  /* --- Mobile Bottom Nav --- */
   .mobile-bottom-nav {
     display: flex;
     position: fixed;
@@ -373,7 +339,6 @@
     padding: 10px 0;
     box-shadow: 0 -5px 15px rgba(0,0,0,0.05);
   }
-  
   .nav-item {
     display: flex;
     flex-direction: column;
@@ -383,15 +348,12 @@
     gap: 4px;
     text-decoration: none;
   }
-  
   .nav-icon {
     height: 20px;
   }
   .nav-item.active {
     color: var(--color-primary);
   }
-
-  /* --- Professional Mobile Menu --- */
   .mobile-menu-wrapper {
     position: fixed;
     top: 0;
@@ -424,14 +386,12 @@
     opacity: 1;
     visibility: visible;
   }
-
   .mm-main-container {
     position: relative;
     width: 100%;
     height: 100%;
     overflow: hidden;
   }
-
   .mm-panel {
     position: absolute;
     top: 0;
@@ -443,20 +403,16 @@
     background: #fff;
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
-
   #mm-main {
     z-index: 1;
   }
-
   .mm-submenu {
     transform: translateX(100%);
     z-index: 2;
   }
-
   .mm-submenu.active {
     transform: translateX(0);
   }
-
   .mm-header {
     height: 50px;
     display: flex;
@@ -471,7 +427,6 @@
     border-bottom: 1px solid #eee;
     justify-content: space-between;
   }
-
   .mm-tab {
     flex: 1;
     display: flex;
@@ -502,13 +457,11 @@
   .mm-header-submenu .mm-close-btn {
     color: #333;
   }
-
   .mm-body {
     flex: 1;
     overflow-y: auto;
     padding: 10px 0;
   }
-
   .mm-list {
     list-style: none;
     padding: 0;
@@ -532,8 +485,6 @@
     font-size: 10px;
     color: #bbb;
   }
-
-  /* Submenu specific list styling */
   .mm-submenu .mm-list li a {
     font-weight: 400;
     font-size: 14px;
@@ -543,7 +494,6 @@
   .mm-submenu .mm-list li a i {
     display: none;
   }
-
   .badge-hot {
     background: #E84511;
     color: #fff;
@@ -556,7 +506,6 @@
     display: inline-block;
     vertical-align: middle;
   }
-
   .mm-list-icons li a {
     justify-content: flex-start;
     gap: 15px;
@@ -569,7 +518,6 @@
     height: 20px;
     opacity: 0.8;
   }
-
   .mm-settings {
     padding: 20px;
     background: #fff;
@@ -615,7 +563,6 @@
     box-shadow: 0 1px 2px rgba(0,0,0,0.1);
     border: 1px solid #DEDEDE;
   }
-
   .mm-back {
     border: none;
     background: transparent;
