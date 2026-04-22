@@ -114,6 +114,78 @@ document.addEventListener("DOMContentLoaded", () => {
   heroSlider();
 
   /* ==========================================
+     3b. TRENDING WEEK MOBILE SLIDER
+     ========================================== */
+  const trendingSlider = () => {
+    const grid = document.querySelector(".trending-week .products-grid");
+    const prevBtn = document.querySelector(".trending-prev");
+    const nextBtn = document.querySelector(".trending-next");
+    if (!grid || !prevBtn || !nextBtn) return;
+
+    let currentPage = 0;
+
+    const getCardsPerPage = () => {
+      // On mobile (<= 768px) show 2 cards at a time
+      return window.innerWidth <= 768 ? 2 : 0;
+    };
+
+    const getTotalPages = () => {
+      const cards = grid.querySelectorAll(".product-card");
+      const perPage = getCardsPerPage();
+      if (perPage === 0) return 0;
+      return Math.ceil(cards.length / perPage);
+    };
+
+    const updateSlider = () => {
+      const perPage = getCardsPerPage();
+      if (perPage === 0) {
+        // Desktop: reset transform
+        grid.style.transform = "translateX(0)";
+        return;
+      }
+
+      const cards = grid.querySelectorAll(".product-card");
+      if (cards.length === 0) return;
+
+      const totalPages = getTotalPages();
+      // Clamp currentPage
+      if (currentPage < 0) currentPage = 0;
+      if (currentPage >= totalPages) currentPage = totalPages - 1;
+
+      // Calculate offset based on card width + gap
+      const card = cards[0];
+      const gap = 15;
+      const cardWidth = card.offsetWidth + gap;
+      const offset = currentPage * perPage * cardWidth;
+
+      grid.style.transform = `translateX(-${offset}px)`;
+    };
+
+    nextBtn.addEventListener("click", () => {
+      const totalPages = getTotalPages();
+      if (currentPage < totalPages - 1) {
+        currentPage++;
+        updateSlider();
+      }
+    });
+
+    prevBtn.addEventListener("click", () => {
+      if (currentPage > 0) {
+        currentPage--;
+        updateSlider();
+      }
+    });
+
+    // Reset on window resize (switching between mobile/desktop)
+    window.addEventListener("resize", () => {
+      currentPage = 0;
+      updateSlider();
+    });
+  };
+
+  trendingSlider();
+
+  /* ==========================================
      4. TRENDING WEEK FILTERING
      ========================================== */
   const trendingTabs = document.querySelectorAll(".trending-tabs .tab-btn");
@@ -157,30 +229,87 @@ document.addEventListener("DOMContentLoaded", () => {
     const next = document.getElementById("new-arrivals-next");
     if (!grid || !prev || !next) return;
 
-    let currentIndex = 0;
-    const cards = grid.querySelectorAll(".product-card");
+    let currentPage = 0;
+    const gap = 15;
 
-    const getVisibleCount = () => {
-      if (window.innerWidth >= 1024) return 4;
-      if (window.innerWidth >= 768) return 2;
-      return 1;
+    const getCardsPerPage = () => {
+      if (window.innerWidth <= 768) return 2;
+      return 0; // Desktop: no slider
+    };
+
+    const getTotalPages = () => {
+      const cards = grid.querySelectorAll(".product-card");
+      const perPage = getCardsPerPage();
+      if (perPage === 0) return 0;
+      return Math.ceil(cards.length / perPage);
     };
 
     const updateSlider = () => {
-      const visibleCount = getVisibleCount();
-      const cardWidth = grid.offsetWidth / visibleCount;
-      grid.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+      const perPage = getCardsPerPage();
+      if (perPage === 0) {
+        grid.style.transform = "translateX(0)";
+        return;
+      }
+      const cards = grid.querySelectorAll(".product-card");
+      if (cards.length === 0) return;
+      const totalPages = getTotalPages();
+      if (currentPage < 0) currentPage = 0;
+      if (currentPage >= totalPages) currentPage = totalPages - 1;
+      const card = cards[0];
+      const cardWidth = card.offsetWidth + gap;
+      const offset = currentPage * perPage * cardWidth;
+      grid.style.transform = `translateX(-${offset}px)`;
     };
 
     next.addEventListener("click", () => {
-      const visibleCount = getVisibleCount();
-      if (currentIndex < cards.length - visibleCount) {
-        currentIndex++;
+      if (currentPage < getTotalPages() - 1) {
+        currentPage++;
         updateSlider();
       }
     });
 
     prev.addEventListener("click", () => {
+      if (currentPage > 0) {
+        currentPage--;
+        updateSlider();
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      currentPage = 0;
+      updateSlider();
+    });
+  };
+
+  newArrivalsSlider();
+
+  /* ==========================================
+     5b. CUSTOMER SAY SLIDER
+     ========================================== */
+  const customerSaySlider = () => {
+    const grid = document.querySelector(".testimonials-grid");
+    const prevBtn = document.querySelector(".cs-prev");
+    const nextBtn = document.querySelector(".cs-next");
+    if (!grid || !prevBtn || !nextBtn) return;
+
+    let currentIndex = 0;
+    const cards = grid.querySelectorAll(".testi-card");
+    if (cards.length === 0) return;
+
+    const updateSlider = () => {
+      // One card at a time (100% width)
+      const offset = currentIndex * 100;
+      grid.style.transform = `translateX(-${offset}%)`;
+    };
+
+    nextBtn.addEventListener("click", () => {
+      if (currentIndex < cards.length - 1) {
+        currentIndex++;
+        updateSlider();
+      }
+    });
+
+    prevBtn.addEventListener("click", () => {
       if (currentIndex > 0) {
         currentIndex--;
         updateSlider();
@@ -189,11 +318,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener("resize", () => {
       currentIndex = 0;
-      updateSlider();
+      grid.style.transform = "translateX(0)";
     });
   };
 
-  newArrivalsSlider();
+  customerSaySlider();
 
   /* ==========================================
      6. CART SYSTEM & MINI CART
@@ -372,19 +501,87 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
   const mobileMenuWrapper = document.getElementById("mobileMenuWrapper");
   const mobileMenuOverlay = document.getElementById("mobileMenuOverlay");
-  const mobileMenuClose = document.getElementById("mobileMenuClose");
+  const mmCloseBtns = document.querySelectorAll(".mm-close-btn");
 
-  const toggleMobileMenu = () => {
+  const toggleMobileMenu = (open = null) => {
     if (!mobileMenuWrapper || !mobileMenuOverlay) return;
-    mobileMenuWrapper.classList.toggle("active");
-    mobileMenuOverlay.classList.toggle("active");
+    const shouldOpen =
+      open !== null ? open : !mobileMenuWrapper.classList.contains("active");
+    if (shouldOpen) {
+      mobileMenuWrapper.classList.add("active");
+      mobileMenuOverlay.classList.add("active");
+      document.body.style.overflow = "hidden";
+    } else {
+      mobileMenuWrapper.classList.remove("active");
+      mobileMenuOverlay.classList.remove("active");
+      document.body.style.overflow = "";
+      // Reset submenu state when closing
+      setTimeout(resetSubmenus, 300);
+    }
   };
 
-  if (mobileMenuBtn) mobileMenuBtn.addEventListener("click", toggleMobileMenu);
-  if (mobileMenuClose)
-    mobileMenuClose.addEventListener("click", toggleMobileMenu);
+  if (mobileMenuBtn)
+    mobileMenuBtn.addEventListener("click", () => toggleMobileMenu(true));
+  mmCloseBtns.forEach((btn) =>
+    btn.addEventListener("click", () => toggleMobileMenu(false)),
+  );
   if (mobileMenuOverlay)
-    mobileMenuOverlay.addEventListener("click", toggleMobileMenu);
+    mobileMenuOverlay.addEventListener("click", () => toggleMobileMenu(false));
+
+  /* --- Mobile Menu Interactions --- */
+  const mmTabs = document.querySelectorAll(".mm-tab");
+  const mmMainContainer = document.querySelector(".mm-main-container");
+  const mmPanels = document.querySelectorAll(".mm-panel");
+  const hasSubmenuItems = document.querySelectorAll(".has-submenu");
+  const mmBackBtns = document.querySelectorAll(".mm-back");
+
+  mmTabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      mmTabs.forEach((t) => t.classList.remove("active"));
+      tab.classList.add("active");
+      // Handle tab content switching if needed (currently only Menu is implemented)
+    });
+  });
+
+  hasSubmenuItems.forEach((item) => {
+    item.addEventListener("click", (e) => {
+      const submenuId = item.getAttribute("data-submenu");
+      if (submenuId) {
+        e.preventDefault();
+        const submenuPanel = document.getElementById(submenuId);
+        if (submenuPanel) {
+          submenuPanel.classList.add("active");
+        }
+      }
+    });
+  });
+
+  mmBackBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const panel = btn.closest(".mm-panel");
+      if (panel && panel.classList.contains("mm-submenu")) {
+        panel.classList.remove("active");
+      }
+    });
+  });
+
+  const resetSubmenus = () => {
+    document.querySelectorAll(".mm-submenu.active").forEach((panel) => {
+      panel.classList.remove("active");
+    });
+  };
+
+  // Language/Currency toggles
+  const mmOptions = document.querySelectorAll(".mm-option");
+  mmOptions.forEach((opt) => {
+    opt.addEventListener("click", () => {
+      const parent = opt.parentElement;
+      parent
+        .querySelectorAll(".mm-option")
+        .forEach((o) => o.classList.remove("active"));
+      opt.classList.add("active");
+    });
+  });
 
   const accordions = document.querySelectorAll(".footer-col.accordion");
   accordions.forEach((acc) => {
