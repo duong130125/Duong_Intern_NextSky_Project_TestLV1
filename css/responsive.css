@@ -204,7 +204,7 @@
     border-color: #ddd;
   }
   .trending-week {
-    padding: 40px 0;
+    padding: 60px 0 30px;
   }
   .trending-tabs {
     display: none; 
@@ -224,7 +224,7 @@
     text-align: left;
   }
   .new-arrivals {
-    padding: 40px 0;
+    padding: 30px 0;
   }
   .new-arrivals .products-grid-wrapper {
     overflow: hidden;
@@ -241,7 +241,7 @@
     text-align: left;
   }
   .customer-say {
-    padding: 40px 0;
+    padding: 30px 0;
   }
   .testimonials-wrapper {
     overflow: hidden;
@@ -271,7 +271,7 @@
     box-sizing: border-box;
   }
   .shop-by-gram {
-    padding: 40px 0;
+    padding: 30px 0 0;
   }
   .gram-grid {
     display: flex !important;
@@ -283,7 +283,7 @@
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    padding-bottom: 10px;
+    /* padding-bottom: 10px; */
   }
   .gram-grid::-webkit-scrollbar {
     display: none;
@@ -292,6 +292,49 @@
     flex: 0 0 45vw;
     scroll-snap-align: start;
   }
+
+  .banner-grid-3 {
+    padding: 30px 0;
+  }
+  .banner-grid-3 .container {
+    padding: 20;
+  }
+  .banner-grid-3 .banner-grid-inner {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 15px;
+    padding: 0;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  .banner-grid-3 .banner-grid-inner::-webkit-scrollbar {
+    display: none;
+  }
+  .banner-grid-3 .banner-item {
+    flex: 0 0 85%;
+    scroll-snap-align: start;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .banner-grid-3 .banner-item img {
+    height: 100%;
+    object-fit: cover;
+  }
+  .banner-grid-3 .banner-label {
+    color: #111111;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+  }
+  .banner-grid-3 .banner-title {
+    font-size: 30px;
+  }
+
   .footer-top {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -359,6 +402,7 @@
     top: 0;
     left: -100%;
     width: 100vw;
+    max-width: 100%;
     height: 100%;
     background: #fff;
     z-index: 1000;
@@ -366,6 +410,7 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    padding-top: env(safe-area-inset-top);
   }
   .mobile-menu-wrapper.active {
     left: 0;
@@ -414,21 +459,27 @@
     transform: translateX(0);
   }
   .mm-header {
-    height: 50px;
+    height: 60px;
     display: flex;
     align-items: center;
     flex-shrink: 0;
   }
   .mm-header-tabs {
-    background: #E84511;
+    background: #D73F0F;
+    padding: 0 25px;
   }
   .mm-header-submenu {
-    background: #f9f9f9;
+    background: #F5F5F5 !important;
+    padding: 0 25px;
     border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
   }
   .mm-tab {
-    flex: 1;
+    flex: none;
+    width: auto;
+    margin-right: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -438,24 +489,39 @@
     cursor: pointer;
     text-transform: uppercase;
     font-family: 'Jost', sans-serif;
+    letter-spacing: 0.5px;
   }
   .mm-tab.active {
-    color: #fff;
+    color: #FFFFFF;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
   }
-  .mm-close-btn {
-    width: 50px;
-    height: 50px;
+  .mm-close-btn{
+    margin-left: auto;
+    width: 20px;
+    height: 20px;
     border: none;
     background: transparent;
     font-size: 20px;
-    color: #fff;
+    color: #FFFFFF !important;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   .mm-header-submenu .mm-close-btn {
-    color: #333;
+    font-family: 'blueskytechco';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    color: #555555 !important;
   }
   .mm-body {
     flex: 1;
@@ -464,140 +530,190 @@
   }
   .mm-list {
     list-style: none;
-    padding: 0;
+    padding: 10px;
     margin: 0;
   }
   .mm-list li {
-    border-bottom: 1px solid #f0f0f0;
+    padding: 0 25px;
   }
   .mm-list li a {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    padding: 16px 20px;
-    color: #111;
+    gap: 10px;
+    padding: 18px 0;
+    color: #111111;
     text-decoration: none;
-    font-size: 15px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 400;
     font-family: 'Jost', sans-serif;
+    border-bottom: 1px solid #f0f0f0;
   }
   .mm-list li a i {
-    font-size: 10px;
-    color: #bbb;
+    font-size: 11px;
+    color: #111111;
+    margin-left: auto;
+  }
+  .mm-submenu .mm-list li {
+    padding: 0 20px;
   }
   .mm-submenu .mm-list li a {
     font-weight: 400;
     font-size: 14px;
-    padding: 14px 20px;
+    padding: 16px 0;
     justify-content: flex-start;
+    border-bottom: 1px solid #f0f0f0;
   }
   .mm-submenu .mm-list li a i {
     display: none;
   }
+  .mm-submenu .mm-list li.has-submenu a i {
+    display: block;
+    font-size: 11px;
+    color: #111111;
+    margin-left: auto;
+  }
   .badge-hot {
-    background: #E84511;
+    background: #D73F0F;
     color: #fff;
-    font-size: 8px;
-    padding: 2px 6px;
-    border-radius: 2px;
-    margin-left: 8px;
+    font-size: 9px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-left: 0;
     font-weight: 700;
     text-transform: uppercase;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     vertical-align: middle;
+    position: relative;
+    line-height: 1;
+    height: 18px;
+  }
+  .badge-hot::before {
+    content: "";
+    position: absolute;
+    left: -4px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 4px 4px 4px 0;
+    border-style: solid;
+    border-color: transparent #D73F0F transparent transparent;
+  }
+  .mm-list-icons li {
+    padding: 0 25px;
   }
   .mm-list-icons li a {
     justify-content: flex-start;
     gap: 15px;
     font-size: 14px;
     font-weight: 500;
-    padding: 14px 20px;
+    padding: 18px 0;
+    border-bottom: 1px solid #f0f0f0;
   }
   .mm-icon {
     width: 20px;
     height: 20px;
-    opacity: 0.8;
+    opacity: 1;
+    object-fit: contain;
+    flex-shrink: 0;
+    display: block;
   }
   .mm-settings {
-    padding: 20px;
+    padding: 25px;
     background: #fff;
   }
   .mm-setting-group {
     border-bottom: 1px solid #f0f0f0;
-    padding-bottom: 25px;
+    padding-bottom: 20px;
   }
   .mm-setting-group label {
     display: block;
-    font-size: 13px;
-    color: #111;
+    font-size: 16px;
+    font-style: Medium;
+    color: #111111;
     text-transform: capitalize;
-    margin-bottom: 12px;
-    font-weight: 600;
+    margin-bottom: 15px;
+    font-weight: 500;
     font-family: 'Jost', sans-serif;
   }
   .mm-options {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 25px;
   }
   .mm-option {
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 13px;
-    color: #666;
+    gap: 10px;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 14px;
+    color: #555555;
     cursor: pointer;
     font-family: 'Jost', sans-serif;    
   }
   .mm-option.active {
-    color: #111;
+    color: #111111;
     font-weight: 600;
-    text-decoration: underline;
-    text-underline-offset: 4px;
+  }
+  .mm-option.active span {
+    border-bottom: 2px solid #111111;
+    display: inline-block;
+    line-height: 1;
+    padding-bottom: 2px;
   }
   .mm-option img {
-    width: 22px;
-    height: auto;
+    width: 30px;
+    height: 30px;
     background: #FFFFFF;
-    border-radius: 100px;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-    border: 1px solid #DEDEDE;
+    border-radius: 50%;
+    padding: 2px;
+    border: 2px solid #DEDEDE;
+    object-fit: cover;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  .mm-option.active img {
+    border: 2px solid #111111;
   }
   .mm-back {
     border: none;
     background: transparent;
-    padding: 0 20px;
-    height: 100%;
-    font-size: 15px;
-    font-weight: 600;
-    color: #111;
+    padding: 0;
+    height: auto;
+    font-size: 16px;
+    font-style: Medium;
+    font-weight: 500;
+    color: #111111;
     cursor: pointer;
     font-family: 'Jost', sans-serif;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 15px;
   }
   .mm-back i {
-    font-size: 12px;
+    font-size: 16px;
+    color: #111111;
   }
   .mm-panel-footer {
-    padding: 25px 20px;
-    border-top: 1px solid #f0f0f0;
+    padding: 25px 35px;
     text-align: center;
   }
+  
   .btn-block {
-    display: inline-flex;
+    display: flex;
     width: 100%;
-    max-width: 260px;
-    height: 44px;
-    background: #111;
-    color: #fff;
+    max-width: auto;
+    height: 45px;
+    background: #111111 !important;
+    color: #ffffff !important;
+    font-family: 'Jost', sans-serif;
     align-items: center;
     justify-content: center;
-    border-radius: 22px;
+    border-radius: 30px;
     text-decoration: none;
-    font-size: 10px;
-    font-weight: 700;
+    font-size: 12px;
+    font-weight: 600;
     letter-spacing: 1px;
     transition: all 0.3s ease;
     text-transform: uppercase;
@@ -607,7 +723,7 @@
     transform: translateY(-2px);
   }
   .mm-banners {
-    padding: 20px;
+    padding: 10px 30px 30px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -615,7 +731,7 @@
   .mm-banner-item {
     position: relative;
     width: 100%;
-    border-radius: 12px;
+    border-radius: 10px;
     overflow: hidden;
   }
   .mm-banner-item img {
@@ -633,14 +749,40 @@
     transform: translateX(-50%);
     background: #fff;
     color: #111;
-    padding: 10px 30px;
-    border-radius: 25px;
+    padding: 12px 30px;
+    border-radius: 40px;
     font-size: 14px;
     font-weight: 600;
     text-decoration: none;
-    min-width: 160px;
+    min-width: 180px;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    font-family: 'Jost', sans-serif;
   }
+  
+  /* .mm-footer {
+    padding: 20px 25px;
+    background: #fff;
+    border-top: 1px solid #f0f0f0;
+    margin-top: auto;
+  }
+  .btn-view-demos {
+    width: 100%;
+    background: #111;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 40px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    font-family: 'Jost', sans-serif;
+    transition: 0.3s ease;
+  }
+  .btn-view-demos:hover {
+    background: #333;
+  } */
 }
 
