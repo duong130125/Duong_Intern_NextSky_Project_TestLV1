@@ -216,7 +216,7 @@
 }
 .payment-icons {
   display: flex;
-  gap: 8px;
+  gap: 5px;
   flex-wrap: wrap;
   justify-content: flex-end;
 }
@@ -303,6 +303,11 @@
   font-size: 14px;
 }
 .newsletter-form .btn-dark {
+  font-family: 'Jost', sans-serif;
+  color: #FFFFFF !important;
+  font-size: 12px;
+  text-transform: uppercase;
+  background-color: #111111;
   border-radius: 30px;
   padding: 0 30px;
   font-weight: 600;

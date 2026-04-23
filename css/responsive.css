@@ -349,12 +349,17 @@
     cursor: pointer;
   }
   .footer-col.accordion .footer-title::after {
-    content: '+';
-    font-size: 20px;
-    font-weight: 300;
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url('../assets/icons/add.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
   }
   .footer-col.accordion.active .footer-title::after {
-    content: '-';
+    background-image: url('../assets/icons/minus.svg');
   }
   .footer-col.accordion .footer-links {
     display: none;
@@ -367,7 +372,7 @@
     flex-direction: column;
     gap: 15px;
     text-align: center;
-    padding-bottom: 80px; 
+    padding-bottom: 70px !important; 
   }
   .mobile-bottom-nav {
     display: flex;
@@ -759,30 +764,64 @@
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     font-family: 'Jost', sans-serif;
   }
-  
-  /* .mm-footer {
-    padding: 20px 25px;
-    background: #fff;
-    border-top: 1px solid #f0f0f0;
-    margin-top: auto;
+
+  .mobile-floating-actions {
+    position: fixed;
+    bottom: 70px;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    z-index: 999;
   }
-  .btn-view-demos {
-    width: 100%;
-    background: #111;
-    color: #fff;
+
+  .floating-btn {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
     border: none;
-    padding: 15px;
-    border-radius: 40px;
-    font-size: 13px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    font-family: 'Jost', sans-serif;
-    transition: 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
   }
-  .btn-view-demos:hover {
-    background: #333;
-  } */
+  .btn-black {
+    width: 50px;
+    height: 50px;
+    background: #111111 !important;
+  }
+  .btn-green {
+    width: 60px;
+    height: 60px;
+    background: #26A66A !important;
+  }
+  .btn-black .icon-arrow {
+    width: 8px;
+  }
+  .btn-green img {
+    width: 22px;
+    height: auto;
+  }
+  .icon-arrow {
+    transition: transform 0.4s ease;
+  }
+  #scrollToBtn:not(.is-scrolled) .icon-arrow {
+    transform: rotate(180deg);
+  }
+  #scrollToBtn.is-scrolled .icon-arrow {
+    transform: rotate(0deg);
+  }
+  .floating-btn:active {
+    transform: scale(0.9);
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-floating-actions {
+    display: none;
+  }
 }
 
