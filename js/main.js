@@ -349,7 +349,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let checkoutInterval;
   const startCheckoutTimer = () => {
     if (!checkoutTimerTxt || checkoutInterval) return;
-    let time = 103; // 1m43s = 103 seconds
+    let time = 103;
     const updateDisplay = () => {
       const m = Math.floor(time / 60);
       const s = time % 60;
@@ -470,23 +470,25 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const scrollBtn = document.getElementById("scrollToBtn");
-const arrowIcon = scrollBtn.querySelector(".icon-arrow");
+if (scrollBtn) {
+  const arrowIcon = scrollBtn.querySelector(".icon-arrow");
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    scrollBtn.classList.add("is-scrolled");
-  } else {
-    scrollBtn.classList.remove("is-scrolled");
-  }
-});
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollBtn.classList.add("is-scrolled");
+    } else {
+      scrollBtn.classList.remove("is-scrolled");
+    }
+  });
 
-scrollBtn.addEventListener("click", () => {
-  if (window.scrollY > 300) {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  } else {
-    const target = document.querySelector(".banner-grid-3") || document.body;
-    const targetPos =
-      target.getBoundingClientRect().top + window.pageYOffset - 100;
-    window.scrollTo({ top: targetPos, behavior: "smooth" });
-  }
-});
+  scrollBtn.addEventListener("click", () => {
+    if (window.scrollY > 300) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      const target = document.querySelector(".banner-grid-3") || document.body;
+      const targetPos =
+        target.getBoundingClientRect().top + window.pageYOffset - 100;
+      window.scrollTo({ top: targetPos, behavior: "smooth" });
+    }
+  });
+}

@@ -116,15 +116,13 @@
     padding: 0;
   }
   .hero-title {
-    font-size: 36px !important;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 38px;
     line-height: 1.1;
     margin-bottom: 15px;
-    font-family: 'Jost';
-    font-weight: 400;
-    font-style: Regular;
-    font-size: 40px;
-    line-height: 45px;
-    letter-spacing: 0%;
+    letter-spacing: -0.5px;
+    color: #111111;
   }
   .hero-subtitle {
     color: #111111;
@@ -133,7 +131,6 @@
     margin-bottom: 25px;
     font-family: 'Jost', 'sans-serif';
     font-weight: 400;
-    font-style: Regular;
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 0%;
@@ -297,7 +294,7 @@
     padding: 30px 0;
   }
   .banner-grid-3 .container {
-    padding: 20;
+    padding: 0 20px;
   }
   .banner-grid-3 .banner-grid-inner {
     display: flex;
@@ -325,7 +322,6 @@
     color: #111111;
     font-family: 'Jost', sans-serif;
     font-weight: 500;
-    font-style: Medium;
     font-size: 12px;
     line-height: 100%;
     letter-spacing: 0%;
@@ -372,7 +368,7 @@
     flex-direction: column;
     gap: 15px;
     text-align: center;
-    padding-bottom: 70px !important; 
+    padding-bottom: 80px !important; 
   }
   .mobile-bottom-nav {
     display: flex;
@@ -380,11 +376,13 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    background: white;
+    height: 75px;
+    background: #FFFFFF;
     border-top: 1px solid var(--color-border);
     z-index: var(--z-mobile-nav);
     justify-content: space-around;
-    padding: 10px 0;
+    opacity: 1;
+    padding: 15px 21px 30px 21px;
     box-shadow: 0 -5px 15px rgba(0,0,0,0.05);
   }
   .nav-item {
@@ -394,13 +392,15 @@
     font-size: 10px;
     color: var(--color-text-muted);
     gap: 4px;
-    text-decoration: none;
+    text-decoration: none;    
   }
-  .nav-icon {
-    height: 20px;
-  }
-  .nav-item.active {
-    color: var(--color-primary);
+  .nav-item {
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #111111;
   }
   .mobile-menu-wrapper {
     position: fixed;
@@ -471,12 +471,12 @@
   }
   .mm-header-tabs {
     background: #D73F0F;
-    padding: 0 25px;
+    padding: 0 30px;
   }
   .mm-header-submenu {
     background: #F5F5F5 !important;
-    padding: 0 25px;
-    border-bottom: 1px solid #eee;
+    padding: 0 30px 0 24px;
+    border-bottom: 1px solid #EBEBEB;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -531,15 +531,15 @@
   .mm-body {
     flex: 1;
     overflow-y: auto;
-    padding: 10px 0;
+    padding: 0;
   }
   .mm-list {
     list-style: none;
-    padding: 10px;
+    padding: 0;
     margin: 0;
   }
   .mm-list li {
-    padding: 0 25px;
+    padding: 0 30px;
   }
   .mm-list li a {
     display: flex;
@@ -552,7 +552,7 @@
     font-size: 16px;
     font-weight: 400;
     font-family: 'Jost', sans-serif;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid #EBEBEB;
   }
   .mm-list li a i {
     font-size: 11px;
@@ -567,7 +567,6 @@
     font-size: 14px;
     padding: 16px 0;
     justify-content: flex-start;
-    border-bottom: 1px solid #f0f0f0;
   }
   .mm-submenu .mm-list li a i {
     display: none;
@@ -606,7 +605,7 @@
     border-color: transparent #D73F0F transparent transparent;
   }
   .mm-list-icons li {
-    padding: 0 25px;
+    padding: 0 30px;
   }
   .mm-list-icons li a {
     justify-content: flex-start;
@@ -614,7 +613,7 @@
     font-size: 14px;
     font-weight: 500;
     padding: 18px 0;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid #EBEBEB;
   }
   .mm-icon {
     width: 20px;
@@ -625,17 +624,16 @@
     display: block;
   }
   .mm-settings {
-    padding: 25px;
+    padding: 0 30px;
     background: #fff;
   }
   .mm-setting-group {
-    border-bottom: 1px solid #f0f0f0;
-    padding-bottom: 20px;
+    border-bottom: 1px solid #EBEBEB;
+    padding: 20px 0 20px;
   }
   .mm-setting-group label {
     display: block;
     font-size: 16px;
-    font-style: Medium;
     color: #111111;
     text-transform: capitalize;
     margin-bottom: 15px;
@@ -652,7 +650,6 @@
     align-items: center;
     gap: 10px;
     font-weight: 500;
-    font-style: Medium;
     font-size: 14px;
     color: #555555;
     cursor: pointer;
@@ -687,7 +684,6 @@
     padding: 0;
     height: auto;
     font-size: 16px;
-    font-style: Medium;
     font-weight: 500;
     color: #111111;
     cursor: pointer;
@@ -708,19 +704,17 @@
   .btn-block {
     display: flex;
     width: 100%;
-    max-width: auto;
-    height: 45px;
-    background: #111111 !important;
-    color: #ffffff !important;
-    font-family: 'Jost', sans-serif;
+    height: 48px;
+    background: var(--color-dark) !important;
+    color: var(--color-bg-body) !important;
     align-items: center;
     justify-content: center;
-    border-radius: 30px;
+    border-radius: var(--radius-pill);
     text-decoration: none;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 600;
     letter-spacing: 1px;
-    transition: all 0.3s ease;
+    transition: var(--transition-standard);
     text-transform: uppercase;
   }
   .btn-block:hover {
@@ -728,7 +722,7 @@
     transform: translateY(-2px);
   }
   .mm-banners {
-    padding: 10px 30px 30px;
+    padding: 0 30px 30px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -752,22 +746,21 @@
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background: #fff;
-    color: #111;
+    background: var(--color-bg-body);
+    color: var(--color-dark);
     padding: 12px 30px;
-    border-radius: 40px;
+    border-radius: var(--radius-pill);
     font-size: 14px;
     font-weight: 600;
     text-decoration: none;
     min-width: 180px;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    font-family: 'Jost', sans-serif;
   }
 
   .mobile-floating-actions {
     position: fixed;
-    bottom: 70px;
+    bottom: 80px;
     right: 15px;
     display: flex;
     flex-direction: column;
@@ -786,17 +779,17 @@
     justify-content: center;
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    transition: all 0.3s ease;
+    transition: var(--transition-standard);
   }
   .btn-black {
     width: 50px;
     height: 50px;
-    background: #111111 !important;
+    background: var(--color-dark) !important;
   }
   .btn-green {
     width: 60px;
     height: 60px;
-    background: #26A66A !important;
+    background: var(--color-accent-green) !important;
   }
   .btn-black .icon-arrow {
     width: 8px;

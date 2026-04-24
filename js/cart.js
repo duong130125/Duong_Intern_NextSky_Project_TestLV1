@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
         cart = cart.filter((item) => item.id !== id);
         localStorage.setItem("cart", JSON.stringify(cart));
         renderCart();
-        updateCartBadge(); // from main.js if accessible, or re-run
+        updateCartBadge();
       }
       if (e.target.classList.contains("btn-inc")) {
         const id = e.target.getAttribute("data-id");
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
             updateCartBadge();
           }
         } else {
-          e.target.value = 1; // reset to 1 if user tries to enter 0 or less
+          e.target.value = 1;
         }
       }
     });
@@ -109,4 +109,3 @@ document.addEventListener("DOMContentLoaded", () => {
     renderCart();
   }
 });
-
