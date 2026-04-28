@@ -31,9 +31,9 @@ document.addEventListener("DOMContentLoaded", () => {
           <td class="col-price">$ ${item.price.toFixed(2)}</td>
           <td class="col-qty">
             <div class="qty-control">
-              <button class="btn-qty btn-dec" data-id="${item.id}">-</button>
+              <button class="btn-qty btn-dec" data-id="${item.id}"><img src="assets/icons/subtract.svg" alt="minus" width="10px" height="10px"></button>
               <input type="number" value="${item.quantity}" min="1" class="qty-input" data-id="${item.id}" />
-              <button class="btn-qty btn-inc" data-id="${item.id}">+</button>
+              <button class="btn-qty btn-inc" data-id="${item.id}"><img src="assets/icons/Union.svg" alt="add" width="10px" height="10px"></button>
             </div>
           </td>
           <td class="col-total">$ ${itemTotal.toFixed(2)}</td>

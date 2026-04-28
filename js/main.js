@@ -292,9 +292,9 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="mci-price">$${item.price.toFixed(2)}</div>
             <div class="mci-controls-row">
               <div class="qty-control">
-                <button class="qty-btn dec" data-id="${item.id}">-</button>
+                <button class="qty-btn dec" data-id="${item.id}"><img src="assets/icons/subtract.svg" alt="minus" width="9px" height="1px"></button>
                 <div class="qty-val">${item.quantity}</div>
-                <button class="qty-btn inc" data-id="${item.id}">+</button>
+                <button class="qty-btn inc" data-id="${item.id}"><img src="assets/icons/Union.svg" alt="add" width="9px" height="9px"></button>
               </div>
             </div>
           </div>
@@ -344,7 +344,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const percent = Math.min((total / target) * 100, 100);
     const remaining = Math.max(target - total, 0);
     shippingProgressBar.style.width = `${percent}%`;
-    shippingRemainingTxt.textContent = `$${remaining.toFixed(2)}`;
   };
   let checkoutInterval;
   const startCheckoutTimer = () => {
