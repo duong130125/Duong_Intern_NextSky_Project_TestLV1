@@ -1,3 +1,14 @@
+const throttle = (func, limit) => {
+  let inThrottle;
+  return function (...args) {
+    if (!inThrottle) {
+      func.apply(this, args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+    }
+  };
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   const cartBadgeHeader = document.getElementById("cart-badge-header");
   const cartBadgeMobile = document.getElementById("cart-badge-mobile");
@@ -22,11 +33,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const startCountdown = () => {
     if (!timerDisplay) return;
     const targetDate = new Date("December 31, 2026 23:59:59").getTime();
+    let lastDisplayedText = "";
     const updateTimer = () => {
       const now = new Date().getTime();
       const distance = targetDate - now;
       if (distance < 0) {
-        timerDisplay.textContent = "EXPIRED";
+        if (lastDisplayedText !== "EXPIRED") {
+          timerDisplay.textContent = "EXPIRED";
+          lastDisplayedText = "EXPIRED";
+        }
         return;
       }
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -35,7 +50,11 @@ document.addEventListener("DOMContentLoaded", () => {
       );
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      timerDisplay.textContent = `${days} days : ${hours.toString().padStart(2, "0")} hours : ${minutes.toString().padStart(2, "0")} mins : ${seconds.toString().padStart(2, "0")} secs`;
+      const newText = `${days} days : ${hours.toString().padStart(2, "0")} hours : ${minutes.toString().padStart(2, "0")} mins : ${seconds.toString().padStart(2, "0")} secs`;
+      if (newText !== lastDisplayedText) {
+        timerDisplay.textContent = newText;
+        lastDisplayedText = newText;
+      }
     };
     updateTimer();
     setInterval(updateTimer, 1000);
@@ -129,10 +148,14 @@ document.addEventListener("DOMContentLoaded", () => {
         updateSlider();
       }
     });
-    window.addEventListener("resize", () => {
-      currentPage = 0;
-      updateSlider();
-    });
+    // Throttle resize handler for better performance
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        currentPage = 0;
+        updateSlider();
+      }, 300),
+    );
   };
   trendingSlider();
   const trendingTabs = document.querySelectorAll(".trending-tabs .tab-btn");
@@ -206,10 +229,14 @@ document.addEventListener("DOMContentLoaded", () => {
         updateSlider();
       }
     });
-    window.addEventListener("resize", () => {
-      currentPage = 0;
-      updateSlider();
-    });
+    // Throttle resize handler for better performance
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        currentPage = 0;
+        updateSlider();
+      }, 300),
+    );
   };
   newArrivalsSlider();
   const customerSaySlider = () => {
@@ -236,10 +263,14 @@ document.addEventListener("DOMContentLoaded", () => {
         updateSlider();
       }
     });
-    window.addEventListener("resize", () => {
-      currentIndex = 0;
-      grid.style.transform = "translateX(0)";
-    });
+    // Throttle resize handler for better performance
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        currentIndex = 0;
+        grid.style.transform = "translateX(0)";
+      }, 300),
+    );
   };
   customerSaySlider();
   const miniCartOverlay = document.getElementById("miniCartOverlay");
@@ -476,14 +507,19 @@ document.addEventListener("DOMContentLoaded", () => {
 const scrollBtn = document.getElementById("scrollToBtn");
 if (scrollBtn) {
   const arrowIcon = scrollBtn.querySelector(".icon-arrow");
+  let lastScrollTop = 0;
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      scrollBtn.classList.add("is-scrolled");
-    } else {
-      scrollBtn.classList.remove("is-scrolled");
-    }
-  });
+  // Throttle scroll listener for better performance
+  window.addEventListener(
+    "scroll",
+    throttle(() => {
+      if (window.scrollY > 300) {
+        scrollBtn.classList.add("is-scrolled");
+      } else {
+        scrollBtn.classList.remove("is-scrolled");
+      }
+    }, 300),
+  );
 
   scrollBtn.addEventListener("click", () => {
     if (window.scrollY > 300) {
