@@ -779,10 +779,10 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
-  background: white;
-  border: none;
+  width: 60px;
+  height: 60px;
+  background: #FFFFFF;
+  border: 1px solid #EBEBEB;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -790,22 +790,25 @@
   cursor: pointer;
   opacity: 0.5;
   transition: all 0.3s ease;
-  font-size: 20px;
+  font-size: 18px;
   z-index: 10;
 }
 .hero-arrow:hover {
   opacity: 1;
+  background-color: #111111;
+  color: #FFFFFF;
+  border-color: #111111;
+}
+.hero-arrow:active {
+  background-color: #111111;
+  color: #FFFFFF;
 }
 .hero-prev {
   left: 30px;
-  background-color: white;
-  color: black;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 .hero-next {
   right: 30px;
-  background-color: white;
-  color: black;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 .hero-dots {
@@ -814,20 +817,19 @@
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 8px;
+  gap: 10px;
   z-index: 10;
 }
 .hero-dots .dot {
-  width: 5px;
-  height: 5px;
+  width: 8px;
+  height: 8px;
   background: rgba(0,0,0,0.3);
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 .hero-dots .dot.active {
-  background: black;
-  transform: scale(1.3);
+  background: #111111;
 }
 .featured-collections {
   padding: 60px 0 0;
@@ -1539,17 +1541,20 @@
 }
 .product-colors {
   display: flex;
-  gap: 8px;
+  gap: 5px;
+  width: 85px;
+  height: 25px;
   margin-top: 12px;
 }
 .color-swatch {
-  width: 16px;
-  height: 16px;
+  width: 19px;
+  height: 19px;
   border-radius: 50%;
   background-color: var(--swatch);
-  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
+  box-shadow: 0 0 0 2px #FFFFFF, 0 0 0 2px #111111;
   cursor: pointer;
   transition: transform 0.2s;
+  margin: 2px; 
 }
 .color-swatch:hover {
   transform: scale(1.2);

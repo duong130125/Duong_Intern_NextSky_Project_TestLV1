@@ -52,10 +52,10 @@
     --container-padding: 15px;
   }
   h2.section-title {
-    font-size: 24px;
+    font-size: 36px;
   }
   p.section-subtitle {
-    font-size: 13px;
+    font-size: 16px;
     margin-bottom: 20px;
     line-height: 1.5;
     padding: 0 10px;
@@ -500,7 +500,7 @@
     transform: translateX(0);
   }
   .mm-header {
-    height: 60px;
+    height: 55px;
     display: flex;
     align-items: center;
     flex-shrink: 0;
@@ -596,7 +596,7 @@
     margin-left: auto;
   }
   .mm-submenu .mm-list li {
-    padding: 0 20px;
+    padding: 0 30px;
   }
   .mm-submenu .mm-list li a {
     font-weight: 400;
@@ -733,14 +733,14 @@
     color: #111111;
   }
   .mm-panel-footer {
-    padding: 25px 35px;
+    padding: 25px 30px;
     text-align: center;
   }
   
   .btn-block {
     display: flex;
     width: 100%;
-    height: 48px;
+    height: 45px;
     background: var(--color-dark) !important;
     color: var(--color-bg-body) !important;
     align-items: center;
@@ -851,6 +851,14 @@
 @media (min-width: 769px) {
   .mobile-floating-actions {
     display: none;
+  }
+
+  .hide-on-desktop {
+    display: none !important;
+  }
+
+  .product-description {
+    display: none !important;
   }
 }
 

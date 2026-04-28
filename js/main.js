@@ -58,6 +58,13 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     const nextSlide = () => goToSlide(currentSlide + 1);
     const prevSlide = () => goToSlide(currentSlide - 1);
+    const startInterval = () => {
+      slideInterval = setInterval(nextSlide, 3000);
+    };
+    const resetInterval = () => {
+      clearInterval(slideInterval);
+      startInterval();
+    };
     if (nextBtn)
       nextBtn.addEventListener("click", () => {
         nextSlide();
@@ -74,9 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
         resetInterval();
       });
     });
-    const resetInterval = () => {
-      clearInterval(slideInterval);
-    };
+    startInterval();
   };
   heroSlider();
   const trendingSlider = () => {

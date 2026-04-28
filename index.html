@@ -20,6 +20,7 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/atomic.css" />
   </head>
     <body>
     <div class="top-announcement-bar">
@@ -38,7 +39,7 @@
           <div class="header-top-center">
             Sign up for 10% off your first order: <a href="#">Sign Up</a>
           </div>
-          <div class="flex items-center gap-25">
+          <div class="flex items-center gap-25 header-top-right">
             <a href="#">Our Stores</a>
             <select aria-label="Language Selector">
               <option>English</option>
@@ -185,11 +186,29 @@
     <main>
       <section class="hero-slider-fw">
         <div class="hero-slides-wrapper">
-          <div class="hero-slide active" style="background-image: url('assets/images/banner-3.png');">
+          <div class="hero-slide active" style="background-image: url('assets/images/banner-1.png');">
+            <div class="container hero-container">
+              <div class="hero-content">
+                <h1 class="hero-title">Modern<br>Fashion Style</h1>
+                <p class="hero-subtitle">Discover our latest collection today.</p>
+                <a href="#" class="btn btn-dark btn-explore">EXPLORE NOW</a>
+              </div>
+            </div>
+          </div>
+            <div class="hero-slide" style="background-image: url('assets/images/banner-3.png');">
             <div class="container hero-container">
               <div class="hero-content">
                 <h1 class="hero-title">Stylish<br>Top Trending</h1>
                 <p class="hero-subtitle">So soft you don't want to take it off.</p>
+                <a href="#" class="btn btn-dark btn-explore">EXPLORE NOW</a>
+              </div>
+            </div>
+          </div>
+          <div class="hero-slide" style="background-image: url('assets/images/banner-2.png');">
+            <div class="container hero-container">
+              <div class="hero-content">
+                <h1 class="hero-title">Exclusive<br>Summer Sale</h1>
+                <p class="hero-subtitle">Up to 50% off on selected items.</p>
                 <a href="#" class="btn btn-dark btn-explore">EXPLORE NOW</a>
               </div>
             </div>
@@ -207,8 +226,7 @@
         <div class="container">
           <h2 class="section-title">Featured Collections</h2>
           <p class="section-subtitle">
-            Elevate your style with our chic featured collections... where
-            fashion meets fun effortlessly.
+            Elevate your style with our chic featured collection—where fashion meets flair effortlessly.
           </p>
           <div class="fc-grid">
             <div class="fc-card fc-card--tall item-clothing">
@@ -232,7 +250,7 @@
       <section class="trending-week">
         <div class="container">
           <h2 class="section-title">Trending this Week</h2>
-          <p class="section-subtitle">Here's some of our most popular products people are in love with.</p>
+          <p class="section-subtitle hide-on-desktop">Here's some of our most popular products people are in love with.</p>
           <div class="trending-nav">
             <button class="trending-prev" aria-label="Previous Products"><i class="fa-solid fa-angle-left" aria-hidden="true"></i></button>
             <button class="trending-next" aria-label="Next Products"><i class="fa-solid fa-angle-right" aria-hidden="true"></i></button>
@@ -257,6 +275,7 @@
                   <button class="btn btn-add-cart add-to-cart-btn" data-id="p8" data-name="Trending Item 4" data-price="145.00" data-image="assets/images/products-13.png">Add To Cart</button>
                 </div>
                 <a href="#" class="product-title">Square Textured Striped</a>
+                <p class="product-description">T-shirts</p>
                 <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                 <div class="product-price">$150.00</div>
                 <div class="product-colors">
@@ -284,6 +303,7 @@
                   </div>
                 </div>
                 <a href="#" class="product-title">Square Textured Striped</a>
+                <p class="product-description">T-shirts</p>
                 <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                 <div class="product-price"><span class="price-sale">$150.00</span> <span class="price-original">$490.00</span></div>
                 <div class="product-colors">
@@ -303,6 +323,7 @@
                   <button class="btn btn-add-cart add-to-cart-btn" data-id="p7" data-name="Trending Item 3" data-price="190.00" data-image="assets/images/products-12.png">Add To Cart</button>
                 </div>
                 <a href="#" class="product-title">Square Textured Striped</a>
+                <p class="product-description">T-shirts</p>
                 <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                 <div class="product-price">$ 190.00</div>
                 <div class="product-colors">
@@ -322,6 +343,7 @@
                   <button class="btn btn-add-cart add-to-cart-btn" data-id="p8" data-name="Trending Item 4" data-price="145.00" data-image="assets/images/products-13.png">Add To Cart</button>
                 </div>
                 <a href="#" class="product-title">Square Textured Striped</a>
+                <p class="product-description">T-shirts</p>
                 <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                 <div class="product-price">$ 145.00</div>
                 <div class="product-colors">
@@ -403,6 +425,7 @@
                 </button>
               </div>
               <a href="#" class="product-title">Square Textured Striped 1</a>
+              <p class="product-description">T-shirts</p>
               <div class="product-rating">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
                 ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
@@ -428,6 +451,7 @@
                 </button>
               </div>
               <a href="#" class="product-title">Square Textured Striped 2</a>
+              <p class="product-description">T-shirts</p>
               <div class="product-rating">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
                 ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
@@ -458,6 +482,7 @@
                 </button>
               </div>
               <a href="#" class="product-title">Square Textured Striped 3</a>
+              <p class="product-description">T-shirts</p>
               <div class="product-rating">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
                 ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
@@ -483,6 +508,7 @@
                 </button>
               </div>
               <a href="#" class="product-title">Square Textured Striped 4</a>
+              <p class="product-description">T-shirts</p>
               <div class="product-rating">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
                 ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
@@ -625,7 +651,7 @@
             </div>
             <div class="follow-shop">
               <div class="icon-wrap">
-                <img
+                <img width="36" height="36"
                   src="assets/icons/icon.svg"
                   alt="Heart"
                 />
@@ -841,7 +867,7 @@
                 <a href="javascript:void(0)">Shop Layout <i class="fa-solid fa-angle-right"></i></a>
               </li>
               <li class="has-submenu">
-                <a href="javascript:void(0)">Shop Page <i class="fa-solid fa-angle-right"></i></a>
+                <a href="javascript:void(0)" style="border-bottom: none;">Shop Page <i class="fa-solid fa-angle-right"></i></a>
               </li>
             </ul>
             <div class="mm-banners">
