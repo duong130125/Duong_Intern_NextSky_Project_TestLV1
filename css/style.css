@@ -532,7 +532,7 @@
 }
 .dropdown-menu {
   position: absolute;
-  top: 51px;
+  top: calc(100% + (70px - 100%) / 2);
   left: -30px;
   width: 250px;
   background: white;
@@ -610,7 +610,7 @@
 .header { position: relative; }
 .mega-menu {
   position: absolute;
-  top: 213%;
+  top: calc(100% + (70px - 100%) / 2);
   left: 50%;
   width: 1047px;
   background: #FFFFFF;
