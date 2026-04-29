@@ -163,9 +163,9 @@
   }
   .product-action-icons {
     display: flex !important;
-    right: 8px !important;
+    right: 10px !important;
     padding-top: 0 !important;
-    margin-top: -7px !important;
+    margin-top: -10px !important;
   }
   .desktop-badge {
     display: none !important;
@@ -582,16 +582,16 @@
     justify-content: flex-start;
     align-items: center;
     gap: 10px;
-    padding: 18px 0;
+    padding: 16px 0;
     color: #111111;
     text-decoration: none;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
     font-family: 'Jost', sans-serif;
     border-bottom: 1px solid #EBEBEB;
   }
-  .mm-list li a i {
-    font-size: 11px;
+  .mm-list li a svg {
+    font-size: 18px;
     color: #111111;
     margin-left: auto;
   }
@@ -600,18 +600,25 @@
   }
   .mm-submenu .mm-list li a {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     padding: 16px 0;
     justify-content: flex-start;
   }
-  .mm-submenu .mm-list li a i {
+  .mm-submenu .mm-list li a svg {
     display: none;
   }
-  .mm-submenu .mm-list li.has-submenu a i {
+  .mm-submenu .mm-list li.has-submenu a svg {
     display: block;
-    font-size: 11px;
+    font-size: 18px;
     color: #111111;
     margin-left: auto;
+  }
+  .has-submenu a {
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
   }
   .badge-hot {
     background: #D73F0F;
@@ -620,7 +627,7 @@
     padding: 3px 8px;
     border-radius: 4px;
     margin-left: 0;
-    font-weight: 700;
+    font-weight: 800;
     text-transform: uppercase;
     display: inline-flex;
     align-items: center;
@@ -629,6 +636,7 @@
     position: relative;
     line-height: 1;
     height: 18px;
+    width: 34px;
   }
   .badge-hot::before {
     content: "";
@@ -645,15 +653,15 @@
   }
   .mm-list-icons li a {
     justify-content: flex-start;
-    gap: 15px;
-    font-size: 14px;
+    gap: 10px;
+    font-size: 16px;
     font-weight: 500;
-    padding: 18px 0;
+    padding: 16px 0;
     border-bottom: 1px solid #EBEBEB;
   }
   .mm-icon {
-    width: 20px;
-    height: 20px;
+    width: auto;
+    height: auto;
     opacity: 1;
     object-fit: contain;
     flex-shrink: 0;
@@ -771,6 +779,7 @@
   }
   .mm-banner-item img {
     width: 100%;
+    height: auto;
     display: block;
     transition: transform 0.5s ease;
   }
@@ -785,11 +794,11 @@
     background: var(--color-bg-body);
     color: var(--color-dark);
     padding: 12px 30px;
-    border-radius: var(--radius-pill);
-    font-size: 14px;
-    font-weight: 600;
+    border-radius: var(--radius-medium);
+    font-size: 16px;
+    font-weight: 500;
     text-decoration: none;
-    min-width: 180px;
+    min-width: 268px;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   }

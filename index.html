@@ -22,7 +22,7 @@
     <link rel="canonical" href="https://umino-store.com/" />
     <link rel="preload" as="style" href="css/style.css">
     <link rel="preload" as="style" href="css/responsive.css">
-    <link rel="preload" as="font" href="https://fonts.gstatic.com/s/jost/v3/b79gjd85cd_e-nqzc20e95zQ.woff2" crossorigin>
+    <link rel="preload" as="image" href="assets/images/banner-1.webp" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
@@ -30,9 +30,13 @@
       href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
     <link rel="stylesheet" href="css/atomic.css" />
+    <link rel="stylesheet" href="css/components.css" />
     
     <script type="application/ld+json">
       {
@@ -99,7 +103,9 @@
             <li class="has-dropdown">
               <a href="index.html" class="active">
                 Home
-                <svg viewBox="0 0 384 512" fill="currentColor" width="1em" height="1em" class="fa-solid fa-angle-down nav-caret"><path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 402.7 54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
+                <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.177734 0.984375C0.0592448 0.875 0 0.742839 0 0.587891C0 0.423828 0.0592448 0.282552 0.177734 0.164062C0.287109 0.0546875 0.423828 0 0.587891 0C0.751953 0 0.888672 0.0546875 0.998047 0.164062L4.08789 3.25391L7.17773 0.164062C7.28711 0.0546875 7.42383 0 7.58789 0C7.75195 0 7.88867 0.0546875 7.99805 0.164062C8.11654 0.282552 8.17578 0.423828 8.17578 0.587891C8.17578 0.742839 8.11654 0.875 7.99805 0.984375L4.49805 4.48438C4.38867 4.60286 4.25195 4.66211 4.08789 4.66211C3.92383 4.66211 3.78711 4.60286 3.67773 4.48438L0.177734 0.984375Z" fill="#555555"/>
+                </svg>
               </a>
               <ul class="dropdown-menu">
                 <li><a href="#">Main demo <span class="nav-badge badge-hot">HOT</span></a></li>
@@ -119,11 +125,12 @@
             <li class="has-mega-menu">
               <a href="shop.html" class="nav-link-shop">
                 Shop
-                <svg viewBox="0 0 384 512" fill="currentColor" width="1em" height="1em" class="fa-solid fa-angle-down nav-caret"><path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 402.7 54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
-              </a>
+                <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.177734 0.984375C0.0592448 0.875 0 0.742839 0 0.587891C0 0.423828 0.0592448 0.282552 0.177734 0.164062C0.287109 0.0546875 0.423828 0 0.587891 0C0.751953 0 0.888672 0.0546875 0.998047 0.164062L4.08789 3.25391L7.17773 0.164062C7.28711 0.0546875 7.42383 0 7.58789 0C7.75195 0 7.88867 0.0546875 7.99805 0.164062C8.11654 0.282552 8.17578 0.423828 8.17578 0.587891C8.17578 0.742839 8.11654 0.875 7.99805 0.984375L4.49805 4.48438C4.38867 4.60286 4.25195 4.66211 4.08789 4.66211C3.92383 4.66211 3.78711 4.60286 3.67773 4.48438L0.177734 0.984375Z" fill="#555555"/>
+                </svg>              </a>
               <div class="mega-menu">
                   <div class="mega-menu-col">
-                      <span class="mega-title">Shop Layouts</span>
+                      <h4 class="mega-title">Shop Layouts</h4>
                     <ul>
                       <li><a href="shop.html?filter=left-sidebar">Filter Left Sidebar</a></li>
                       <li><a href="shop.html?filter=right-sidebar">Filter Right Sidebar</a></li>
@@ -161,20 +168,23 @@
             <li>
               <a href="products.html">
                 Products
-                <svg viewBox="0 0 384 512" fill="currentColor" width="1em" height="1em" class="fa-solid fa-angle-down nav-caret"><path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 402.7 54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
-              </a>
+                <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.177734 0.984375C0.0592448 0.875 0 0.742839 0 0.587891C0 0.423828 0.0592448 0.282552 0.177734 0.164062C0.287109 0.0546875 0.423828 0 0.587891 0C0.751953 0 0.888672 0.0546875 0.998047 0.164062L4.08789 3.25391L7.17773 0.164062C7.28711 0.0546875 7.42383 0 7.58789 0C7.75195 0 7.88867 0.0546875 7.99805 0.164062C8.11654 0.282552 8.17578 0.423828 8.17578 0.587891C8.17578 0.742839 8.11654 0.875 7.99805 0.984375L4.49805 4.48438C4.38867 4.60286 4.25195 4.66211 4.08789 4.66211C3.92383 4.66211 3.78711 4.60286 3.67773 4.48438L0.177734 0.984375Z" fill="#555555"/>
+                </svg>              </a>
             </li>
             <li>
               <a href="pages.html">
                 Pages
-                <svg viewBox="0 0 384 512" fill="currentColor" width="1em" height="1em" class="fa-solid fa-angle-down nav-caret"><path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 402.7 54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
-              </a>
+                <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.177734 0.984375C0.0592448 0.875 0 0.742839 0 0.587891C0 0.423828 0.0592448 0.282552 0.177734 0.164062C0.287109 0.0546875 0.423828 0 0.587891 0C0.751953 0 0.888672 0.0546875 0.998047 0.164062L4.08789 3.25391L7.17773 0.164062C7.28711 0.0546875 7.42383 0 7.58789 0C7.75195 0 7.88867 0.0546875 7.99805 0.164062C8.11654 0.282552 8.17578 0.423828 8.17578 0.587891C8.17578 0.742839 8.11654 0.875 7.99805 0.984375L4.49805 4.48438C4.38867 4.60286 4.25195 4.66211 4.08789 4.66211C3.92383 4.66211 3.78711 4.60286 3.67773 4.48438L0.177734 0.984375Z" fill="#555555"/>
+                </svg>              </a>
             </li>
             <li>
               <a href="blog.html">
                 Blog
-                <svg viewBox="0 0 384 512" fill="currentColor" width="1em" height="1em" class="fa-solid fa-angle-down nav-caret"><path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 402.7 54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
-              </a>
+                <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.177734 0.984375C0.0592448 0.875 0 0.742839 0 0.587891C0 0.423828 0.0592448 0.282552 0.177734 0.164062C0.287109 0.0546875 0.423828 0 0.587891 0C0.751953 0 0.888672 0.0546875 0.998047 0.164062L4.08789 3.25391L7.17773 0.164062C7.28711 0.0546875 7.42383 0 7.58789 0C7.75195 0 7.88867 0.0546875 7.99805 0.164062C8.11654 0.282552 8.17578 0.423828 8.17578 0.587891C8.17578 0.742839 8.11654 0.875 7.99805 0.984375L4.49805 4.48438C4.38867 4.60286 4.25195 4.66211 4.08789 4.66211C3.92383 4.66211 3.78711 4.60286 3.67773 4.48438L0.177734 0.984375Z" fill="#555555"/>
+                </svg>              </a>
             </li>
             <li><a href="sale.html">Sale</a></li>
             <li><a href="https://www.umino.com/">Buy Umino!</a></li>
@@ -235,8 +245,8 @@
         <button class="hero-arrow hero-prev" aria-label="Previous Slide"><svg viewBox="0 0 320 512" fill="currentColor" width="1em" height="1em" class="fa-solid fa-angle-left"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg></button>
         <button class="hero-arrow hero-next" aria-label="Next Slide"><svg viewBox="0 0 320 512" fill="currentColor" width="1em" height="1em" class="fa-solid fa-angle-right"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg></button>
         <div class="hero-dots">
-          <span class="dot" data-index="0"></span>
-          <span class="dot active" data-index="1"></span>
+          <span class="dot active" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
           <span class="dot" data-index="2"></span>
         </div>
       </section>
@@ -305,7 +315,7 @@
               <div class="product-card">
                 <div class="product-image-wrap">
                   <span class="badge-discount">-10%</span>
-                  <button class="btn btn-preorder">Pre-Order</button>
+                  <button class="btn-preorder">Pre-Order</button>
                   <div class="product-action-icons">
                     <button class="action-icon-btn"><img width="14" height="14" src="assets/icons/heart.svg" alt="Heart" /></button>
                     <button class="action-icon-btn"><img width="14" height="14" src="assets/icons/eye.svg" alt="Eye" /></button>
@@ -424,7 +434,7 @@
                   <span class="badge-sold-out desktop-badge">Sold Out</span>
                   <div class="mobile-badges">
                     <span class="badge-discount">-10%</span>
-                    <button class="btn btn-preorder">Pre-Order</button>
+                    <button class="btn-preorder">Pre-Order</button>
                   </div>
                   <div class="product-action-icons">
                     <button class="action-icon-btn"><img width="14" height="14" src="assets/icons/heart.svg" alt="Heart" /></button>
@@ -484,7 +494,7 @@
             <div class="product-card">
               <div class="product-image-wrap">
                 <span class="badge-discount">-10%</span>
-                <button class="btn btn-preorder">Pre-Order</button>
+                <button class="btn-preorder">Pre-Order</button>
                 <div class="product-action-icons">
                   <button class="action-icon-btn"><img width="14" height="14" src="assets/icons/heart.svg" alt="Heart" /></button>
                   <button class="action-icon-btn"><img width="14" height="14" src="assets/icons/eye.svg" alt="Eye" /></button>
@@ -779,19 +789,34 @@
           <div class="mm-body">
             <ul class="mm-list">
               <li class="has-submenu" data-submenu="mm-home">
-                <a href="index.html">Home <svg viewBox="0 0 320 512" fill="currentColor" width="1em" height="1em" class="fa-solid fa-angle-right"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg></a>
+                <a href="index.html">Home <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.2832 10.2656C1.14258 10.418 0.966797 10.4941 0.755859 10.4941C0.544922 10.4941 0.369141 10.418 0.228516 10.2656C0.0761719 10.125 0 9.95508 0 9.75586C0 9.54492 0.0761719 9.36328 0.228516 9.21094L4.20117 5.23828L0.228516 1.26562C0.0761719 1.125 0 0.955078 0 0.755859C0 0.544922 0.0761719 0.363281 0.228516 0.210938C0.369141 0.0703125 0.544922 0 0.755859 0C0.966797 0 1.14258 0.0703125 1.2832 0.210938L5.7832 4.71094C5.93555 4.86328 6.01172 5.04492 6.01172 5.25586C6.01172 5.45508 5.93555 5.625 5.7832 5.76562L1.2832 10.2656Z" fill="#111111"/>
+                    </svg>
+                  </a>
               </li>
               <li class="has-submenu" data-submenu="mm-shop">
-                <a href="shop.html">Shop <svg viewBox="0 0 320 512" fill="currentColor" width="1em" height="1em" class="fa-solid fa-angle-right"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg></a>
+                <a href="shop.html">Shop <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.2832 10.2656C1.14258 10.418 0.966797 10.4941 0.755859 10.4941C0.544922 10.4941 0.369141 10.418 0.228516 10.2656C0.0761719 10.125 0 9.95508 0 9.75586C0 9.54492 0.0761719 9.36328 0.228516 9.21094L4.20117 5.23828L0.228516 1.26562C0.0761719 1.125 0 0.955078 0 0.755859C0 0.544922 0.0761719 0.363281 0.228516 0.210938C0.369141 0.0703125 0.544922 0 0.755859 0C0.966797 0 1.14258 0.0703125 1.2832 0.210938L5.7832 4.71094C5.93555 4.86328 6.01172 5.04492 6.01172 5.25586C6.01172 5.45508 5.93555 5.625 5.7832 5.76562L1.2832 10.2656Z" fill="#111111"/>
+                  </svg>
+                </a>
               </li>
               <li class="has-submenu">
-                <a href="products.html">Products <svg viewBox="0 0 320 512" fill="currentColor" width="1em" height="1em" class="fa-solid fa-angle-right"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg></a>
+                <a href="products.html">Products <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.2832 10.2656C1.14258 10.418 0.966797 10.4941 0.755859 10.4941C0.544922 10.4941 0.369141 10.418 0.228516 10.2656C0.0761719 10.125 0 9.95508 0 9.75586C0 9.54492 0.0761719 9.36328 0.228516 9.21094L4.20117 5.23828L0.228516 1.26562C0.0761719 1.125 0 0.955078 0 0.755859C0 0.544922 0.0761719 0.363281 0.228516 0.210938C0.369141 0.0703125 0.544922 0 0.755859 0C0.966797 0 1.14258 0.0703125 1.2832 0.210938L5.7832 4.71094C5.93555 4.86328 6.01172 5.04492 6.01172 5.25586C6.01172 5.45508 5.93555 5.625 5.7832 5.76562L1.2832 10.2656Z" fill="#111111"/>
+                  </svg>
+                </a>
               </li>
               <li class="has-submenu">
-                <a href="pages.html">Pages <svg viewBox="0 0 320 512" fill="currentColor" width="1em" height="1em" class="fa-solid fa-angle-right"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg></a>
+                <a href="pages.html">Pages <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.2832 10.2656C1.14258 10.418 0.966797 10.4941 0.755859 10.4941C0.544922 10.4941 0.369141 10.418 0.228516 10.2656C0.0761719 10.125 0 9.95508 0 9.75586C0 9.54492 0.0761719 9.36328 0.228516 9.21094L4.20117 5.23828L0.228516 1.26562C0.0761719 1.125 0 0.955078 0 0.755859C0 0.544922 0.0761719 0.363281 0.228516 0.210938C0.369141 0.0703125 0.544922 0 0.755859 0C0.966797 0 1.14258 0.0703125 1.2832 0.210938L5.7832 4.71094C5.93555 4.86328 6.01172 5.04492 6.01172 5.25586C6.01172 5.45508 5.93555 5.625 5.7832 5.76562L1.2832 10.2656Z" fill="#111111"/>
+                </svg>
+                </a>
               </li>
               <li class="has-submenu">
-                <a href="blog.html">Blog <svg viewBox="0 0 320 512" fill="currentColor" width="1em" height="1em" class="fa-solid fa-angle-right"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg></a>
+                <a href="blog.html">Blog <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.2832 10.2656C1.14258 10.418 0.966797 10.4941 0.755859 10.4941C0.544922 10.4941 0.369141 10.418 0.228516 10.2656C0.0761719 10.125 0 9.95508 0 9.75586C0 9.54492 0.0761719 9.36328 0.228516 9.21094L4.20117 5.23828L0.228516 1.26562C0.0761719 1.125 0 0.955078 0 0.755859C0 0.544922 0.0761719 0.363281 0.228516 0.210938C0.369141 0.0703125 0.544922 0 0.755859 0C0.966797 0 1.14258 0.0703125 1.2832 0.210938L5.7832 4.71094C5.93555 4.86328 6.01172 5.04492 6.01172 5.25586C6.01172 5.45508 5.93555 5.625 5.7832 5.76562L1.2832 10.2656Z" fill="#111111"/>
+                </svg>
+                </a>
               </li>
               <li>
                 <a href="sale.html">Sale <span class="badge-hot">HOT</span></a>
@@ -874,10 +899,16 @@
           <div class="mm-body">
             <ul class="mm-list">
               <li class="has-submenu" data-submenu="mm-shop-layout">
-                <a href="shop.html">Shop Layout <svg viewBox="0 0 320 512" fill="currentColor" width="1em" height="1em" class="fa-solid fa-angle-right"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg></a>
+                <a href="shop.html" style="font-weight: 500;">Shop Layout <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.2832 10.2656C1.14258 10.418 0.966797 10.4941 0.755859 10.4941C0.544922 10.4941 0.369141 10.418 0.228516 10.2656C0.0761719 10.125 0 9.95508 0 9.75586C0 9.54492 0.0761719 9.36328 0.228516 9.21094L4.20117 5.23828L0.228516 1.26562C0.0761719 1.125 0 0.955078 0 0.755859C0 0.544922 0.0761719 0.363281 0.228516 0.210938C0.369141 0.0703125 0.544922 0 0.755859 0C0.966797 0 1.14258 0.0703125 1.2832 0.210938L5.7832 4.71094C5.93555 4.86328 6.01172 5.04492 6.01172 5.25586C6.01172 5.45508 5.93555 5.625 5.7832 5.76562L1.2832 10.2656Z" fill="#111111"/>
+                </svg>
+                </a>
               </li>
               <li class="has-submenu">
-                <a href="shop.html" style="border-bottom: none;">Shop Page <svg viewBox="0 0 320 512" fill="currentColor" width="1em" height="1em" class="fa-solid fa-angle-right"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg></a>
+                <a href="shop.html" style="border-bottom: none; font-weight: 500;">Shop Page <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.2832 10.2656C1.14258 10.418 0.966797 10.4941 0.755859 10.4941C0.544922 10.4941 0.369141 10.418 0.228516 10.2656C0.0761719 10.125 0 9.95508 0 9.75586C0 9.54492 0.0761719 9.36328 0.228516 9.21094L4.20117 5.23828L0.228516 1.26562C0.0761719 1.125 0 0.955078 0 0.755859C0 0.544922 0.0761719 0.363281 0.228516 0.210938C0.369141 0.0703125 0.544922 0 0.755859 0C0.966797 0 1.14258 0.0703125 1.2832 0.210938L5.7832 4.71094C5.93555 4.86328 6.01172 5.04492 6.01172 5.25586C6.01172 5.45508 5.93555 5.625 5.7832 5.76562L1.2832 10.2656Z" fill="#111111"/>
+                </svg>
+                </a>
               </li>
             </ul>
             <div class="mm-banners">
