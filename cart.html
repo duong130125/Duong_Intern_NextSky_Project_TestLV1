@@ -16,19 +16,32 @@
     <meta property="og:url" content="https://umino-store.com/cart.html" />
     <meta property="og:type" content="website" />
     <link rel="canonical" href="https://umino-store.com/cart.html" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
-    <link rel="stylesheet" href="css/cart.css" />
-    <link rel="stylesheet" href="css/atomic.css" />
-    <link rel="stylesheet" href="css/components.css" />
+    
+    <style>
+      :root {
+        --color-primary: #000000; --color-dark: #111111; --color-text-main: #222222;
+        --color-bg-body: #ffffff; --color-border: #EBEBEB; --font-family-base: 'Jost', sans-serif;
+      }
+      body { font-family: var(--font-family-base); color: var(--color-text-main); background-color: var(--color-bg-body); margin: 0; }
+    </style>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/base.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/responsive.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/cart.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/atomic.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/components.css" media="print" onload="this.media='all'">
+    
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap">
+      <link rel="stylesheet" href="css/base.css">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/responsive.css">
+      <link rel="stylesheet" href="css/cart.css">
+    </noscript>
   </head>
   <body>
     <div class="top-announcement-bar">
