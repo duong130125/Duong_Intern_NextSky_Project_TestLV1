@@ -217,6 +217,8 @@
 .payment-icons img {
   height: 26px;
   width: auto;
+  aspect-ratio: 43 / 26;
+  object-fit: contain;
   border: 1px solid var(--color-border);
   border-radius: 4px;
 }
@@ -527,7 +529,7 @@
 }
 .dropdown-menu {
   position: absolute;
-  top: calc(100% + (70px - 100%) / 2);
+  top: calc(60px - 10px);
   left: -30px;
   width: 250px;
   background: white;
@@ -605,7 +607,7 @@
 .header { position: relative; }
 .mega-menu {
   position: absolute;
-  top: calc(100% + (70px - 100%) / 2);
+  top: calc(60px - 10px);
   left: 50%;
   width: 1047px;
   background: #FFFFFF;
