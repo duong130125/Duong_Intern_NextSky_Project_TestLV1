@@ -68,12 +68,12 @@
   }
   .header {
     padding: 0;
-    height: 60px;
+    height: 73px;
     display: flex;
     align-items: center;
   }
   .header-inner {
-    padding: 0 15px;
+    padding: 0 20px 0 18px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -99,12 +99,12 @@
     align-items: center;
   }
   .header-logo__img {
-    height: 18px;
+    height: 20px;
   }
   .header-icons {
     display: flex;
     justify-content: flex-end;
-    gap: 15px;
+    gap: 20px;
   }
   .header-icon-item.desktop-only {
     display: none;

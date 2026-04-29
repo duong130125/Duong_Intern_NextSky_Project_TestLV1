@@ -7,10 +7,10 @@
   --color-bg-body: #ffffff;
   --color-bg-gray: #f5f5f5;
   --color-border: #EBEBEB;
-  --color-badge-sale: #ff5252;
-  --color-badge-preorder: #00a89d;
-  --color-badge-soldout: #999999;
-  --color-badge-hot: #D73F0F;
+  --color-badge-sale: #D32F2F;
+  --color-badge-preorder: #008f86;
+  --color-badge-soldout: #555555;
+  --color-badge-hot: #A92D09;
   --font-family-base: 'Jost', sans-serif;
   --container-width: 1440px;
   --container-padding: 30px;
