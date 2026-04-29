@@ -118,7 +118,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (perPage === 0) return 0;
       return Math.ceil(cards.length / perPage);
     };
-    let cardWidthCache = 0;
     const updateSlider = () => {
       const perPage = getCardsPerPage();
       if (perPage === 0) {
@@ -127,16 +126,13 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       const cards = grid.querySelectorAll(".product-card");
       if (cards.length === 0) return;
-
-      if (!cardWidthCache) {
-        const gap = 15;
-        cardWidthCache = cards[0].offsetWidth + gap;
-      }
-
       const totalPages = getTotalPages();
       if (currentPage < 0) currentPage = 0;
       if (currentPage >= totalPages) currentPage = totalPages - 1;
-      const offset = currentPage * perPage * cardWidthCache;
+      const card = cards[0];
+      const gap = 15;
+      const cardWidth = card.offsetWidth + gap;
+      const offset = currentPage * perPage * cardWidth;
       grid.style.transform = `translateX(-${offset}px)`;
     };
     nextBtn.addEventListener("click", () => {
@@ -204,7 +200,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (perPage === 0) return 0;
       return Math.ceil(cards.length / perPage);
     };
-    let cardWidthCache = 0;
     const updateSlider = () => {
       const perPage = getCardsPerPage();
       if (perPage === 0) {
@@ -213,15 +208,12 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       const cards = grid.querySelectorAll(".product-card");
       if (cards.length === 0) return;
-
-      if (!cardWidthCache) {
-        cardWidthCache = cards[0].offsetWidth + gap;
-      }
-
       const totalPages = getTotalPages();
       if (currentPage < 0) currentPage = 0;
       if (currentPage >= totalPages) currentPage = totalPages - 1;
-      const offset = currentPage * perPage * cardWidthCache;
+      const card = cards[0];
+      const cardWidth = card.offsetWidth + gap;
+      const offset = currentPage * perPage * cardWidth;
       grid.style.transform = `translateX(-${offset}px)`;
     };
     next.addEventListener("click", () => {
