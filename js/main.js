@@ -272,9 +272,13 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 300),
     );
   };
-  customerSaySlider();
-  const miniCartOverlay = document.getElementById("miniCartOverlay");
+  // Defer non-critical sliders to reduce initial Main Thread work
+  setTimeout(() => {
+    newArrivalsSlider();
+    customerSaySlider();
+  }, 1000);
   const miniCartDrawer = document.getElementById("miniCartDrawer");
+  const miniCartOverlay = document.getElementById("miniCartOverlay");
   const miniCartClose = document.getElementById("miniCartClose");
   const miniCartItemsCont = document.getElementById("miniCartItems");
   const miniCartSubtotalTxt = document.getElementById("miniCartSubtotal");
