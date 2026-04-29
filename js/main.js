@@ -148,7 +148,6 @@ document.addEventListener("DOMContentLoaded", () => {
         updateSlider();
       }
     });
-    // Throttle resize handler for better performance
     window.addEventListener(
       "resize",
       throttle(() => {
@@ -193,7 +192,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const gap = 15;
     const getCardsPerPage = () => {
       if (window.innerWidth <= 768) return 2;
-      return 0; // Desktop: no slider
+      return 0;
     };
     const getTotalPages = () => {
       const cards = grid.querySelectorAll(".product-card");
