@@ -3,13 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Umino Theme - Figma to HTML</title>
+    <title>Umino - Premium Fashion E-commerce Store | Modern Styles</title>
     <meta
       name="description"
-      content="Umino Theme perfectly converted from Figma. Pixel perfect and highly responsive layout."
+      content="Shop premium fashion collections at Umino. Discover trendy clothing, accessories, and more with exclusive deals. Fast shipping and authentic products."
     />
+    <meta name="keywords" content="fashion, clothing, e-commerce, online shopping, trendy style, accessories" />
+    <meta name="author" content="Umino Store" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Umino - Premium Fashion E-commerce Store" />
+    <meta property="og:description" content="Shop premium fashion collections at Umino. Discover trendy clothing and accessories." />
+    <meta property="og:image" content="assets/images/Logo.svg" />
+    <meta property="og:url" content="https://umino-store.com/" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Umino - Premium Fashion E-commerce" />
+    <meta name="twitter:description" content="Shop premium fashion collections with exclusive deals" />
+    <link rel="canonical" href="https://umino-store.com/" />
+    <link rel="preload" as="style" href="css/style.css">
+    <link rel="preload" as="style" href="css/responsive.css">
+    <link rel="preload" as="font" href="https://fonts.gstatic.com/s/jost/v3/b79gjd85cd_e-nqzc20e95zQ.woff2" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap"
       rel="stylesheet"
@@ -23,6 +39,21 @@
       media="print"
       onload="this.media='all'"
     />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Umino Store",
+        "url": "https://umino-store.com",
+        "logo": "https://umino-store.com/assets/images/Logo.svg",
+        "sameAs": ["https://facebook.com/umino", "https://instagram.com/umino", "https://twitter.com/umino"],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+222-1800-2628",
+          "contactType": "Customer Service"
+        }
+      }
+    </script>
   </head>
     <body>
     <div class="top-announcement-bar">
@@ -39,10 +70,10 @@
             <span>blueskytechcompany@gmail.com</span>
           </div>
           <div class="header-top-center">
-            Sign up for 10% off your first order: <a href="#">Sign Up</a>
+            Sign up for 10% off your first order: <a href="signup.html">Sign Up</a>
           </div>
           <div class="flex items-center gap-25 header-top-right">
-            <a href="#">Our Stores</a>
+            <a href="stores.html">Our Stores</a>
             <select aria-label="Language Selector">
               <option>English</option>
             </select>
@@ -57,7 +88,7 @@
         <button class="mobile-menu-btn mobile-only" aria-label="Open Mobile Menu">
           <i class="fa-solid fa-bars" aria-hidden="true"></i>
         </button>
-        <a href="#" class="header-logo">
+        <a href="index.html" class="header-logo">
           <img
             src="assets/images/Logo.svg"
             alt="Umino - Fashion E-commerce"
@@ -69,7 +100,7 @@
         <nav class="header-nav desktop-only">
           <ul>
             <li class="has-dropdown">
-              <a href="#" class="active">
+              <a href="index.html" class="active">
                 Home
                 <i
                   class="fa-solid fa-angle-down nav-caret"
@@ -92,7 +123,7 @@
               </ul>
             </li>
             <li class="has-mega-menu">
-              <a href="#" class="nav-link-shop">
+              <a href="shop.html" class="nav-link-shop">
                 Shop
                 <i class="fa-solid fa-angle-down nav-caret" aria-hidden="true"></i>
               </a>
@@ -100,25 +131,25 @@
                   <div class="mega-menu-col">
                       <span class="mega-title">Shop Layouts</span>
                     <ul>
-                      <li><a href="#">Filter Left Sidebar</a></li>
-                      <li><a href="#">Filter Right Sidebar</a></li>
-                      <li><a href="#">Filter Dropdown</a></li>
-                      <li><a href="#">Canvas Sidebar</a></li>
-                      <li><a href="#">Full Width</a></li>
-                      <li><a href="#">List View</a></li>
-                      <li><a href="#">Grid 2 Columns</a></li>
-                      <li><a href="#">Grid 3 Columns</a></li>
-                      <li><a href="#">Grid 4 Columns</a></li>
+                      <li><a href="shop.html?filter=left-sidebar">Filter Left Sidebar</a></li>
+                      <li><a href="shop.html?filter=right-sidebar">Filter Right Sidebar</a></li>
+                      <li><a href="shop.html?filter=dropdown">Filter Dropdown</a></li>
+                      <li><a href="shop.html?filter=canvas">Canvas Sidebar</a></li>
+                      <li><a href="shop.html?layout=full-width">Full Width</a></li>
+                      <li><a href="shop.html?layout=list">List View</a></li>
+                      <li><a href="shop.html?layout=grid2">Grid 2 Columns</a></li>
+                      <li><a href="shop.html?layout=grid3">Grid 3 Columns</a></li>
+                      <li><a href="shop.html?layout=grid4">Grid 4 Columns</a></li>
                     </ul>
                 </div>
                 <div class="mega-menu-col">
                   <h4>Shop Pages</h4>
                   <ul>
-                    <li><a href="#">Collection List v1</a></li>
-                    <li><a href="#">Collection List v2</a></li>
-                    <li><a href="#">Load More Button</a></li>
-                    <li><a href="#">Infinite Scrolling</a></li>
-                    <li><a href="#">Pagination Page</a></li>
+                    <li><a href="shop.html?view=collection-v1">Collection List v1</a></li>
+                    <li><a href="shop.html?view=collection-v2">Collection List v2</a></li>
+                    <li><a href="shop.html?pagination=load-more">Load More Button</a></li>
+                    <li><a href="shop.html?pagination=infinite">Infinite Scrolling</a></li>
+                    <li><a href="shop.html?pagination=page">Pagination Page</a></li>
                   </ul>
                 </div>
                 <div class="mega-menu-col mega-menu-images">
@@ -134,7 +165,7 @@
               </div>
             </li>
             <li>
-              <a href="#">
+              <a href="products.html">
                 Products
                 <i
                   class="fa-solid fa-angle-down nav-caret"
@@ -143,7 +174,7 @@
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="pages.html">
                 Pages
                 <i
                   class="fa-solid fa-angle-down nav-caret"
@@ -152,7 +183,7 @@
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="blog.html">
                 Blog
                 <i
                   class="fa-solid fa-angle-down nav-caret"
@@ -160,21 +191,21 @@
                 ></i>
               </a>
             </li>
-            <li><a href="#">Sale</a></li>
-            <li><a href="#">Buy Umino!</a></li>
+            <li><a href="sale.html">Sale</a></li>
+            <li><a href="https://www.umino.com/">Buy Umino!</a></li>
           </ul>
         </nav>
         <div class="header-icons">
-          <a href="#" class="header-icon-item" aria-label="Search">
+          <a href="search.html" class="header-icon-item" aria-label="Search">
             <img width="20" height="20" src="assets/icons/search.svg" alt="" class="svg-icon" style="width: 17px;height: 17px;" />
           </a>
-          <a href="#" class="header-icon-item desktop-only" aria-label="Account">
+          <a href="account.html" class="header-icon-item desktop-only" aria-label="Account">
             <img width="20" height="20" src="assets/icons/login.svg" alt="" class="svg-icon"  style="width: 17px;height: 17px;" />
           </a>
-          <a href="#" class="header-icon-item desktop-only" aria-label="Order Tracking">
+          <a href="tracking.html" class="header-icon-item desktop-only" aria-label="Order Tracking">
             <img width="20" height="20" src="assets/icons/clock.svg" alt="" class="svg-icon"  style="width: 17px;height: 17px;" />
           </a>
-          <a href="#" class="header-icon-item desktop-only" aria-label="Wishlist">
+          <a href="wishlist.html" class="header-icon-item desktop-only" aria-label="Wishlist">
             <img width="20" height="20" src="assets/icons/heart.svg" alt="" class="svg-icon"  style="width: 20px;height: 17px;" />
             <span class="icon-badge">0</span>
           </a>
@@ -193,7 +224,7 @@
               <div class="hero-content">
                 <h1 class="hero-title">Modern<br>Fashion Style</h1>
                 <p class="hero-subtitle">Discover our latest collection today.</p>
-                <a href="#" class="btn btn-dark btn-explore">EXPLORE NOW</a>
+                <a href="shop.html" class="btn btn-dark btn-explore">EXPLORE NOW</a>
               </div>
             </div>
           </div>
@@ -202,7 +233,7 @@
               <div class="hero-content">
                 <h1 class="hero-title">Stylish<br>Top Trending</h1>
                 <p class="hero-subtitle">So soft you don't want to take it off.</p>
-                <a href="#" class="btn btn-dark btn-explore">EXPLORE NOW</a>
+                <a href="shop.html?category=trending" class="btn btn-dark btn-explore">EXPLORE NOW</a>
               </div>
             </div>
           </div>
@@ -211,7 +242,7 @@
               <div class="hero-content">
                 <h1 class="hero-title">Exclusive<br>Summer Sale</h1>
                 <p class="hero-subtitle">Up to 50% off on selected items.</p>
-                <a href="#" class="btn btn-dark btn-explore">EXPLORE NOW</a>
+                <a href="sale.html" class="btn btn-dark btn-explore">EXPLORE NOW</a>
               </div>
             </div>
           </div>
@@ -233,19 +264,19 @@
           <div class="fc-grid">
             <div class="fc-card fc-card--tall item-clothing">
               <img src="assets/images/products-3.png" alt="Trendy Clothing Collection" width="600" height="800" loading="lazy" />
-              <a href="#" class="btn">Clothing</a>
+              <a href="shop.html?category=clothing" class="btn">Clothing</a>
             </div>
             <div class="fc-card item-sunglasses">
               <img src="assets/images/products-4.png" alt="Stylish Sunglasses" width="600" height="400" loading="lazy" />
-              <a href="#" class="btn">Sunglasses</a>
+              <a href="shop.html?category=sunglasses" class="btn">Sunglasses</a>
             </div>
             <div class="fc-card item-bags">
               <img src="assets/images/products-5.png" alt="Modern Bags" width="600" height="400" loading="lazy" />
-              <a href="#" class="btn">Bags</a>
+              <a href="shop.html?category=bags" class="btn">Bags</a>
             </div>
             <div class="fc-card fc-card--tall item-sneaker">
               <img src="assets/images/products-6.png" alt="Sporty Sneaker Collection" width="600" height="800" loading="lazy" />
-              <a href="#" class="btn">Sneaker</a>
+              <a href="shop.html?category=sneaker" class="btn">Sneaker</a>
             </div>
           </div>
         </div>
@@ -276,7 +307,7 @@
                   <img src="assets/images/products-10.png" alt="Square Textured Striped T-Shirt" width="300" height="400" loading="lazy" />
                   <button class="btn btn-add-cart add-to-cart-btn" data-id="p8" data-name="Trending Item 4" data-price="145.00" data-image="assets/images/products-13.png">Add To Cart</button>
                 </div>
-                <a href="#" class="product-title">Square Textured Striped</a>
+                <a href="product-details.html?id=p8" class="product-title">Square Textured Striped</a>
                 <p class="product-description">T-shirts</p>
                 <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                 <div class="product-price">$150.00</div>
@@ -304,7 +335,7 @@
                     </div>
                   </div>
                 </div>
-                <a href="#" class="product-title">Square Textured Striped</a>
+                <a href="product-details.html?id=p8-sale" class="product-title">Square Textured Striped</a>
                 <p class="product-description">T-shirts</p>
                 <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                 <div class="product-price"><span class="price-sale">$150.00</span> <span class="price-original">$490.00</span></div>
@@ -324,7 +355,7 @@
                   <img src="assets/images/products-12.png" alt="Product Image" width="300" height="400" loading="lazy" />
                   <button class="btn btn-add-cart add-to-cart-btn" data-id="p7" data-name="Trending Item 3" data-price="190.00" data-image="assets/images/products-12.png">Add To Cart</button>
                 </div>
-                <a href="#" class="product-title">Square Textured Striped</a>
+                <a href="product-details.html?id=p7" class="product-title">Square Textured Striped</a>
                 <p class="product-description">T-shirts</p>
                 <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                 <div class="product-price">$ 190.00</div>
@@ -344,7 +375,7 @@
                   <img width="300" height="400" src="assets/images/products-13.png" alt="Product" />
                   <button class="btn btn-add-cart add-to-cart-btn" data-id="p8" data-name="Trending Item 4" data-price="145.00" data-image="assets/images/products-13.png">Add To Cart</button>
                 </div>
-                <a href="#" class="product-title">Square Textured Striped</a>
+                <a href="product-details.html?id=p8" class="product-title">Square Textured Striped</a>
                 <p class="product-description">T-shirts</p>
                 <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                 <div class="product-price">$ 145.00</div>
@@ -426,7 +457,7 @@
                   Add To Cart
                 </button>
               </div>
-              <a href="#" class="product-title">Square Textured Striped 1</a>
+              <a href="product-details.html?id=p1" class="product-title">Square Textured Striped 1</a>
               <p class="product-description">T-shirts</p>
               <div class="product-rating">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
@@ -452,7 +483,7 @@
                   Add To Cart
                 </button>
               </div>
-              <a href="#" class="product-title">Square Textured Striped 2</a>
+              <a href="product-details.html?id=p2" class="product-title">Square Textured Striped 2</a>
               <p class="product-description">T-shirts</p>
               <div class="product-rating">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
@@ -483,7 +514,7 @@
                   Add To Cart
                 </button>
               </div>
-              <a href="#" class="product-title">Square Textured Striped 3</a>
+              <a href="product-details.html?id=p3" class="product-title">Square Textured Striped 3</a>
               <p class="product-description">T-shirts</p>
               <div class="product-rating">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
@@ -509,7 +540,7 @@
                   Add To Cart
                 </button>
               </div>
-              <a href="#" class="product-title">Square Textured Striped 4</a>
+              <a href="product-details.html?id=p4" class="product-title">Square Textured Striped 4</a>
               <p class="product-description">T-shirts</p>
               <div class="product-rating">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
@@ -620,31 +651,31 @@
               <p>blueskytechcompany@gmail.com</p>
             </div>
             <div class="footer-socials">
-              <a href="#"
+              <a href="https://instagram.com/umino" target="_blank" rel="noopener noreferrer"
                 ><img width="20" height="20"
                   src="assets/icons/social/instagram.svg"
                   alt="Instagram"
                   class="footer-social-icon"
               /></a>
-              <a href="#"
+              <a href="https://tiktok.com/@umino" target="_blank" rel="noopener noreferrer"
                 ><img width="20" height="20"
                   src="assets/icons/social/tiktok.svg"
                   alt="TikTok"
                   class="footer-social-icon"
               /></a>
-              <a href="#"
+              <a href="https://youtube.com/@umino" target="_blank" rel="noopener noreferrer"
                 ><img width="20" height="20"
                   src="assets/icons/social/youtube.svg"
                   alt="YouTube"
                   class="footer-social-icon"
               /></a>
-              <a href="#"
+              <a href="https://twitter.com/umino" target="_blank" rel="noopener noreferrer"
                 ><img width="20" height="20"
                   src="assets/icons/social/twitter.svg"
                   alt="Twitter"
                   class="footer-social-icon"
               /></a>
-              <a href="#"
+              <a href="https://facebook.com/umino" target="_blank" rel="noopener noreferrer"
                 ><img width="20" height="20"
                   src="assets/icons/social/facebook.svg"
                   alt="Facebook"
@@ -660,7 +691,7 @@
               </div>
               <span class="follow-shop__label">
                 Follow on
-                <a href="#" class="follow-shop__logo"
+                <a href="https://shop.umino.com/" class="follow-shop__logo"
                   ><img width="100" height="30" src="assets/images/Logo_shop.svg" alt="Shop" />
                 </a>
               </span>
@@ -669,24 +700,24 @@
           <div class="footer-col accordion">
             <h3 class="footer-title">Hot Categories</h3>
             <ul class="footer-links">
-              <li><a href="#">Special Offers</a></li>
-              <li><a href="#">Performance</a></li>
-              <li><a href="#">T-shirts</a></li>
-              <li><a href="#">Underwear</a></li>
-              <li><a href="#">Top Brands</a></li>
-              <li><a href="#">Online Exclusive</a></li>
+              <li><a href="shop.html?category=special-offers">Special Offers</a></li>
+              <li><a href="shop.html?category=performance">Performance</a></li>
+              <li><a href="shop.html?category=t-shirts">T-shirts</a></li>
+              <li><a href="shop.html?category=underwear">Underwear</a></li>
+              <li><a href="shop.html?category=top-brands">Top Brands</a></li>
+              <li><a href="shop.html?category=online-exclusive">Online Exclusive</a></li>
             </ul>
           </div>
           <div class="footer-col accordion">
             <h3 class="footer-title">Customer Service</h3>
             <ul class="footer-links">
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Refund Policy</a></li>
-              <li><a href="#">Shipping & Return</a></li>
-              <li><a href="#">Term & Conditions</a></li>
-              <li><a href="#">Advanced Search</a></li>
-              <li><a href="#">Theme FAQs</a></li>
-              <li><a href="#">Store Locations</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="refund.html">Refund Policy</a></li>
+              <li><a href="shipping.html">Shipping & Return</a></li>
+              <li><a href="terms.html">Term & Conditions</a></li>
+              <li><a href="search.html?advanced=true">Advanced Search</a></li>
+              <li><a href="faq.html">Theme FAQs</a></li>
+              <li><a href="locations.html">Store Locations</a></li>
             </ul>
           </div>
           <div class="footer-col accordion active">
@@ -726,25 +757,25 @@
       </div>
     </footer>
     <nav class="mobile-bottom-nav">
-      <a href="#" class="nav-item active">
+      <a href="index.html" class="nav-item active">
         <div class="nav-icon-wrap">
           <img width="20" height="20" src="assets/icons/home.svg" alt="Home" class="nav-icon" style="width: 17px;height: 17px;" />
         </div>
         <span>Home</span>
       </a>
-      <a href="#" class="nav-item">
+      <a href="shop.html" class="nav-item">
         <div class="nav-icon-wrap">
           <img width="20" height="20" src="assets/icons/shop.svg" alt="Shop" class="nav-icon" style="width: 17px;height: 17px;" />
         </div>
         <span>Shop</span>
       </a>
-      <a href="#" class="nav-item">
+      <a href="account.html" class="nav-item">
         <div class="nav-icon-wrap">
           <img width="20" height="20" src="assets/icons/login.svg" alt="Account" class="nav-icon" style="width: 17px;height: 17px;" />
         </div>
         <span>Account</span>
       </a>
-      <a href="#" class="nav-item">
+      <a href="wishlist.html" class="nav-item">
         <div class="nav-icon-wrap">
           <img width="20" height="20" src="assets/icons/heart.svg" alt="Wishlist" class="nav-icon" style="width: 20px;height: 17px;" />
           <span class="icon-badge">0</span>
@@ -771,42 +802,42 @@
           <div class="mm-body">
             <ul class="mm-list">
               <li class="has-submenu" data-submenu="mm-home">
-                <a href="javascript:void(0)">Home <i class="fa-solid fa-angle-right"></i></a>
+                <a href="index.html">Home <i class="fa-solid fa-angle-right"></i></a>
               </li>
               <li class="has-submenu" data-submenu="mm-shop">
-                <a href="javascript:void(0)">Shop <i class="fa-solid fa-angle-right"></i></a>
+                <a href="shop.html">Shop <i class="fa-solid fa-angle-right"></i></a>
               </li>
               <li class="has-submenu">
-                <a href="javascript:void(0)">Products <i class="fa-solid fa-angle-right"></i></a>
+                <a href="products.html">Products <i class="fa-solid fa-angle-right"></i></a>
               </li>
               <li class="has-submenu">
-                <a href="javascript:void(0)">Pages <i class="fa-solid fa-angle-right"></i></a>
+                <a href="pages.html">Pages <i class="fa-solid fa-angle-right"></i></a>
               </li>
               <li class="has-submenu">
-                <a href="javascript:void(0)">Blog <i class="fa-solid fa-angle-right"></i></a>
+                <a href="blog.html">Blog <i class="fa-solid fa-angle-right"></i></a>
               </li>
               <li>
-                <a href="#">Sale <span class="badge-hot">HOT</span></a>
+                <a href="sale.html">Sale <span class="badge-hot">HOT</span></a>
               </li>
               <li>
-                <a href="#">Buy Umino</a>
+                <a href="https://www.umino.com/">Buy Umino</a>
               </li>
             </ul>
             <ul class="mm-list mm-list-icons">
               <li>
-                <a href="#">
+                <a href="recently-viewed.html">
                   <img width="20" height="20" src="assets/icons/clock.svg" alt="Recent" class="mm-icon">
                   Recently Viewed
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="wishlist.html">
                   <img width="20" height="20" src="assets/icons/heart.svg" alt="Wishlist" class="mm-icon">
                   Wishlist
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="account.html">
                   <img width="20" height="20" src="assets/icons/login.svg" alt="Login" class="mm-icon">
                   Login / Register
                 </a>
@@ -841,20 +872,20 @@
           </div>
           <div class="mm-body">
             <ul class="mm-list">
-              <li><a href="#">Main Demo</a></li>
-              <li><a href="#">Skincare</a></li>
-              <li><a href="#">Simple Modern</a></li>
-              <li><a href="#">TikTok Fashion</a></li>
-              <li><a href="#">Trendy Style</a></li>
-              <li><a href="#">Minimal Clothings</a></li>
-              <li><a href="#">Men's Luxury</a></li>
-              <li><a href="#">Clothing Store</a></li>
-              <li><a href="#">Categories Men's</a></li>
-              <li><a href="#">Unique Watches</a></li>
-              <li><a href="#">Underwear</a></li>
+              <li><a href="index.html">Main Demo</a></li>
+              <li><a href="shop.html?category=skincare">Skincare</a></li>
+              <li><a href="shop.html?style=modern">Simple Modern</a></li>
+              <li><a href="shop.html?style=tiktok">TikTok Fashion</a></li>
+              <li><a href="shop.html?style=trendy">Trendy Style</a></li>
+              <li><a href="shop.html?style=minimal">Minimal Clothings</a></li>
+              <li><a href="shop.html?category=mens">Men's Luxury</a></li>
+              <li><a href="shop.html?category=clothing">Clothing Store</a></li>
+              <li><a href="shop.html?category=mens">Categories Men's</a></li>
+              <li><a href="shop.html?category=watches">Unique Watches</a></li>
+              <li><a href="shop.html?category=underwear">Underwear</a></li>
             </ul>
             <div class="mm-panel-footer">
-              <a href="#" class="btn btn-dark btn-block">VIEW ALL DEMOS</a>
+              <a href="shop.html" class="btn btn-dark btn-block">VIEW ALL DEMOS</a>
             </div>
           </div>
         </div>
@@ -866,20 +897,20 @@
           <div class="mm-body">
             <ul class="mm-list">
               <li class="has-submenu" data-submenu="mm-shop-layout">
-                <a href="javascript:void(0)">Shop Layout <i class="fa-solid fa-angle-right"></i></a>
+                <a href="shop.html">Shop Layout <i class="fa-solid fa-angle-right"></i></a>
               </li>
               <li class="has-submenu">
-                <a href="javascript:void(0)" style="border-bottom: none;">Shop Page <i class="fa-solid fa-angle-right"></i></a>
+                <a href="shop.html" style="border-bottom: none;">Shop Page <i class="fa-solid fa-angle-right"></i></a>
               </li>
             </ul>
             <div class="mm-banners">
               <div class="mm-banner-item">
                 <img width="300" height="400" src="assets/images/header-shop-2.png" alt="Shop Banner 2">
-                <a href="#" class="btn-banner">Underwear</a>
+                <a href="shop.html?category=underwear" class="btn-banner">Underwear</a>
               </div>
               <div class="mm-banner-item">
                 <img width="300" height="400" src="assets/images/header-shop-1.png" alt="Shop Banner 1">
-                <a href="#" class="btn-banner">Underwear</a>
+                <a href="shop.html?category=underwear" class="btn-banner">Underwear</a>
               </div>
             </div>
           </div>
@@ -891,13 +922,13 @@
           </div>
           <div class="mm-body">
             <ul class="mm-list">
-                <li><a href="#">Filter left sidebar</a></li>
-                <li><a href="#">Filter right sidebar</a></li>
-                <li><a href="#">Canvas sidebar</a></li>
-                <li><a href="#">Dropdown sidebar</a></li>
-                <li><a href="#">Grid 2 columns</a></li>
-                <li><a href="#">Grid 3 columns</a></li>
-                <li><a href="#">List view</a></li>
+                <li><a href="shop.html?filter=left-sidebar">Filter left sidebar</a></li>
+                <li><a href="shop.html?filter=right-sidebar">Filter right sidebar</a></li>
+                <li><a href="shop.html?filter=canvas">Canvas sidebar</a></li>
+                <li><a href="shop.html?filter=dropdown">Dropdown sidebar</a></li>
+                <li><a href="shop.html?layout=grid2">Grid 2 columns</a></li>
+                <li><a href="shop.html?layout=grid3">Grid 3 columns</a></li>
+                <li><a href="shop.html?layout=list">List view</a></li>
             </ul>
           </div>
         </div>
