@@ -5,11 +5,7 @@ body {
   font-size: 16px;
   overflow-x: hidden;
 }
-.container {
-  max-width: var(--container-width);
-  margin: 0 auto;
-  padding: 0 var(--container-padding);
-}
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   margin-bottom: 1rem;

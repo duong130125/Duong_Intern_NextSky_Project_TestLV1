@@ -112,7 +112,7 @@
 }
 .product-rating {
   font-size: 10px;
-  color: #ffb800; 
+  color: #111111; 
   margin-bottom: 5px;
   display: flex;
   gap: 2px;
@@ -121,15 +121,6 @@
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 8px;
-}
-.price-old {
-  color: #707070;
-  text-decoration: line-through;
-  font-weight: 400;
-  margin-left: 5px;
-}
-.price-new {
-  color: var(--color-badge-sale);
 }
 .product-colors {
   display: flex;
