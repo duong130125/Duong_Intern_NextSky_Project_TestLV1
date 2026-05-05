@@ -42,6 +42,7 @@
   .footer-top {
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+    margin-bottom: 30px;
   }
   .newsletter-form {
     max-width: 100%;
