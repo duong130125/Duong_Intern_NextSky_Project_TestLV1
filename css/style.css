@@ -74,7 +74,6 @@ p.section-subtitle { text-align: center; color: var(--color-text-muted); margin-
 .product-card { position: relative; text-align: left; overflow: hidden; display: block; }
 .product-image-wrap { position: relative; border-radius: 10px; overflow: hidden; margin-bottom: 15px; aspect-ratio: 3/4; }
 .product-image-wrap > img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--transition-fast); }
-.product-card:hover .product-image-wrap > img { transform: scale(1.05); }
 .product-actions {
   position: absolute;
   top: 10px;
@@ -1579,9 +1578,6 @@ h2.section-title {
   border-radius: 10px;
   object-fit: cover;
   transition: transform 0.8s ease;
-}
-.banner-item:hover img {
-  transform: scale(1.05);
 }
 .banner-content {
   position: absolute;
