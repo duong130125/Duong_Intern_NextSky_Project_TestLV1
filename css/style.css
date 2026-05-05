@@ -35,8 +35,6 @@ button { cursor: pointer; background: none; border: none; }
 }
 
 .container { max-width: var(--container-width); margin: 0 auto; padding: 0 var(--container-padding); }
-h2.section-title { font-size: 32px; text-align: center; margin-bottom: 10px; }
-p.section-subtitle { text-align: center; color: var(--color-text-muted); margin-bottom: 40px; font-size: 16px; }
 .hidden { display: none !important; }
 .desktop-only { display: block; }
 .mobile-only { display: none; }
@@ -72,7 +70,7 @@ p.section-subtitle { text-align: center; color: var(--color-text-muted); margin-
 .badge.pre-order { background-color: var(--color-badge-preorder); }
 .badge.sold-out { background-color: var(--color-badge-soldout); }
 .product-card { position: relative; text-align: left; overflow: hidden; display: block; }
-.product-image-wrap { position: relative; border-radius: 10px; overflow: hidden; margin-bottom: 15px; aspect-ratio: 3/4; }
+.product-image-wrap { position: relative; border-radius: 10px; overflow: hidden; margin-bottom: 16px; aspect-ratio: 3/4; }
 .product-image-wrap > img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--transition-fast); }
 .product-actions {
   position: absolute;
@@ -109,25 +107,25 @@ p.section-subtitle { text-align: center; color: var(--color-text-muted); margin-
 .product-title {
   font-size: 14px;
   font-weight: 500;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   display: block;
 }
 .product-rating {
   font-size: 10px;
   color: #111111; 
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   display: flex;
-  gap: 2px;
+  gap: 1px;
 }
 .product-price {
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 8px;
 }
-.product-colors {
+/* .product-colors {
   display: flex;
   gap: 5px;
-}
+} */
 .color-swatch {
   width: 16px;
   height: 16px;
@@ -314,13 +312,13 @@ p.section-subtitle { text-align: center; color: var(--color-text-muted); margin-
 }
 .footer-top {
   display: grid;
-  grid-template-columns: 3.5fr 1.5fr 1.5fr 3.5fr;
+  grid-template-columns: 3.5fr 1.5fr 1.6fr 3.4fr;
   gap: 40px;
-  margin-bottom: 80px;
+  margin-bottom: 70px;
 }
 .footer-logo {
   height: 20px;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 .footer-social-icon {
   height: 36px;
@@ -346,7 +344,7 @@ p.section-subtitle { text-align: center; color: var(--color-text-muted); margin-
   font-family: 'Jost', sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.7;
   letter-spacing: 0%;
 }
 .payment-icons {
@@ -369,11 +367,11 @@ p.section-subtitle { text-align: center; color: var(--color-text-muted); margin-
 .footer-contact p {
   color: var(--color-text-muted);
   font-size: 16px;
-  margin-bottom: 3px;
+  margin-bottom: 5px;
 }
 .footer-socials {
   display: flex;
-  gap: 15px;
+  gap: 10px;
   margin: 22px 0 0;
 }
 .footer-socials a {
@@ -407,9 +405,11 @@ p.section-subtitle { text-align: center; color: var(--color-text-muted); margin-
   font-weight: 700;
   letter-spacing: -0.5px;
 }
+
 .footer-title {
   font-size: 14px;
   font-weight: 600;
+  padding-top: 8px;
   text-transform: uppercase;
   margin-bottom: 25px;
 }
@@ -566,10 +566,10 @@ p.section-subtitle { text-align: center; color: var(--color-text-muted); margin-
   overflow: hidden;
   width: 100%;
 }
-.products-grid {
+/* .products-grid {
   display: flex;
   transition: transform 0.4s ease-in-out, opacity 0.3s ease;
-}
+} */
 .products-grid .product-card {
   min-width: calc(25% - 15px);
   flex-shrink: 0;
@@ -880,7 +880,6 @@ p.section-subtitle { text-align: center; color: var(--color-text-muted); margin-
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 15px;
 }
 .hero-content {
   max-width: 437px;
@@ -897,6 +896,7 @@ p.section-subtitle { text-align: center; color: var(--color-text-muted); margin-
   letter-spacing: 0%;
 }
 .hero-subtitle {
+  height: 23px;
   color: #111111;
   margin-bottom: 50px;
   font-family: 'Jost', sans-serif;
@@ -959,7 +959,7 @@ p.section-subtitle { text-align: center; color: var(--color-text-muted); margin-
 }
 .hero-dots {
   position: absolute;
-  bottom: 15px;
+  bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -982,6 +982,7 @@ p.section-subtitle { text-align: center; color: var(--color-text-muted); margin-
   text-align: center;
 }
 h2.section-title {
+  height: 32px;
   color: #111111;
   font-family: 'Jost', sans-serif;
   font-weight: 400;
@@ -989,15 +990,18 @@ h2.section-title {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
+  margin-bottom: 25px;
 }
 .section-subtitle {
   color: #555555;
+  height: 11px;
   font-family: 'Jost', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
+  margin-bottom: 40px;
 }
 .trending-week {
   padding: 100px 0 0;
@@ -1011,6 +1015,7 @@ h2.section-title {
   justify-content: center;
   gap: 10px;
   margin-bottom: 40px;
+  padding-top: 15px;
   flex-wrap: wrap;
 }
 .tab-btn {
@@ -1195,7 +1200,7 @@ h2.section-title {
   font-size: 12px;
   display: flex;
   justify-content: center;
-  gap: 5px;
+  gap: 1px;
 }
 .testi-author {
   color: #111111;
@@ -1581,8 +1586,9 @@ h2.section-title {
 }
 .banner-content {
   position: absolute;
-  bottom: 40px;
-  left: 30px;
+  height: 98px;
+  bottom: 50px;
+  left: 50px;
   width: calc(100% - 60px);
   display: flex;
   flex-direction: column;
@@ -1598,15 +1604,16 @@ h2.section-title {
   letter-spacing: 0%;
   text-transform: uppercase;
   color: #111111;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 .banner-title {
   color: #111111;
+  height: 36px;
   font-family: 'Jost', sans-serif;
   font-weight: 400;
-  font-size: 28px;
-  line-height: 1.2;
-  margin: 0 0 10px;
+  font-size: 36px;
+  line-height: 50px;
+  margin: 0 0 30px;
   letter-spacing: 0%;
 }
 .banner-link {
@@ -1692,7 +1699,6 @@ h2.section-title {
   gap: 5px;
   width: 85px;
   height: 25px;
-  margin-top: 12px;
 }
 .color-swatch {
   width: 19px;
