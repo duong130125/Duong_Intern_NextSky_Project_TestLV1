@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!grid || !prevBtn || !nextBtn) return;
     let currentPage = 0;
     const getCardsPerPage = () => {
-      return window.innerWidth <= 768 ? 2 : 0;
+      return window.innerWidth <= 1023 ? 2 : 0;
     };
     const getTotalPages = () => {
       const cards = grid.querySelectorAll(".product-card");
@@ -191,7 +191,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentPage = 0;
     const gap = 15;
     const getCardsPerPage = () => {
-      if (window.innerWidth <= 768) return 2;
+      if (window.innerWidth <= 1023) return 2;
       return 0;
     };
     const getTotalPages = () => {

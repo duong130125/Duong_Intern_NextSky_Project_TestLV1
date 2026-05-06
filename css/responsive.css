@@ -1,4 +1,4 @@
-﻿@media (max-width: 1023px) {
+@media (max-width: 1023px) {
   .fc-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -30,9 +30,108 @@
   .fc-card img {
     height: 100%;
   }
-  .products-grid {
-    grid-template-columns: 1fr 1fr;
+
+  .products-grid-wrapper {
+    overflow: hidden;
   }
+  .products-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .trending-week .product-card,
+  .new-arrivals .product-card {
+    flex: 0 0 calc(50% - 10px);
+    min-width: 0;
+  }
+  .slider-nav, .trending-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  .slider-nav button, .trending-prev, .trending-next {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+  }
+  .trending-tabs {
+    display: none;
+  }
+
+  .testimonials-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+  }
+  .customer-say .testimonials-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 0 !important;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-top: 0;
+    width: 100%;
+  }
+  .customer-say .testi-card {
+    flex: 0 0 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+  .customer-say-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  .cs-prev, .cs-next {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+  }
+
+  .gram-grid {
+    display: flex !important;
+    flex-wrap: nowrap;
+    gap: 10px !important;
+    grid-template-columns: unset !important;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .gram-grid::-webkit-scrollbar {
+    display: none;
+  }
+  .gram-img-wrap {
+    flex: 0 0 calc(50% - 5px);
+    scroll-snap-align: start;
+  }
+
   .footer-top {
     grid-template-columns: 1fr 1fr;
     gap: 30px;
@@ -42,11 +141,11 @@
     max-width: 100%;
   }
   .banner-grid-inner {
-    gap: 20;
+    gap: 30px;
   }
   .banner-item {
     height: auto;
-    aspect-ratio: 9 / 16;
+    aspect-ratio: 2 / 4;
   }
   .banner-content {
     bottom: 25px;
