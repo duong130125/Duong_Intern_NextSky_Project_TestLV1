@@ -1,6 +1,15 @@
 *, *::before, *::after { box-sizing: border-box; }
 * { margin: 0; padding: 0; }
-body { line-height: 1.5; -webkit-font-smoothing: antialiased; font-family: 'Jost', sans-serif; color: #222222; background-color: #ffffff; font-size: 16px; overflow-x: hidden; }
+html, body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Jost', sans-serif;
+  color: #222222;
+  background-color: #ffffff;
+  font-size: 16px;
+  overflow-x: hidden;
+  width: 100%;
+}
 img, picture, video, canvas, svg { display: block; max-width: 100%; }
 input, button, textarea, select { font: inherit; }
 h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; font-weight: 500; margin-bottom: 1rem; }
@@ -24,7 +33,7 @@ button { cursor: pointer; background: none; border: none; }
   --font-family-base: 'Jost', sans-serif;
   --container-width: 1410px;
   --container-padding-mobile: 20px;
-  /* --container-padding: 30px; */
+  --container-padding: 30px;
   --transition-fast: 0.3s ease;
   --transition-standard: 0.3s ease;
   --radius-pill: 50px;
@@ -983,7 +992,7 @@ button { cursor: pointer; background: none; border: none; }
   text-align: center;
 }
 h2.section-title {
-  height: 32px;
+  height: auto;
   color: #111111;
   font-family: 'Jost', sans-serif;
   font-weight: 400;
@@ -995,7 +1004,7 @@ h2.section-title {
 }
 .section-subtitle {
   color: #555555;
-  height: 11px;
+  height: auto;
   font-family: 'Jost', sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -1650,38 +1659,6 @@ h2.section-title {
   box-shadow: none;
   border: 1px solid #f0f0f0;
 }
-.testi-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  background: #FFFFFF;
-  border: 1px solid #EBEBEB;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  z-index: 10;
-  font-size: 14px;
-  color: #555;
-  transition: all 0.3s;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  backdrop-filter: blur(4px);
-  opacity: 0.4;
-}
-.testi-arrow:hover {
-  background: rgba(156, 156, 156, 0.4);
-  color: white;
-  border-color: transparent;
-}
-.testi-arrow.left {
-  left: 15px;
-}
-.testi-arrow.right {
-  right: 15px;
-}
 .testi-avatar {
   object-fit: cover;
 }
@@ -1693,7 +1670,6 @@ h2.section-title {
   .banner-item {
     height: 400px;
   }
-  .testi-arrow { display: none; }
 }
 .product-colors {
   display: flex;
@@ -1755,6 +1731,7 @@ h2.section-title {
 @media (max-width: 991px) {
   .header-top { display: none; }
   .follow-shop { display: none !important; }
+  .header-nav { display: none !important; }
 }
 .badge-preorder {
   position: absolute;
