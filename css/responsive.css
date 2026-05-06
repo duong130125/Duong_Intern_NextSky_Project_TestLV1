@@ -1,4 +1,4 @@
-@media (max-width: 1023px) {
+﻿@media (max-width: 1023px) {
   .fc-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -40,6 +40,22 @@
   }
   .newsletter-form {
     max-width: 100%;
+  }
+  .banner-grid-inner {
+    gap: 20;
+  }
+  .banner-item {
+    height: auto;
+    aspect-ratio: 9 / 16;
+  }
+  .banner-content {
+    bottom: 25px;
+    left: 25px;
+    width: calc(100% - 50px);
+  }
+  .banner-title {
+    font-size: 24px;
+    margin-bottom: 10px;
   }
 }
   @media (max-width: 767px) {
@@ -317,7 +333,8 @@
     scroll-snap-align: start;
     border-radius: 10px;
     overflow: hidden;
-    aspect-ratio: 299 / 399; 
+    aspect-ratio: 3 / 4; 
+    height: auto;
   }
   .banner-grid-3 .banner-item img {
     width: 100%;
