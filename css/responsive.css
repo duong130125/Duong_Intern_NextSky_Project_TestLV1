@@ -1,4 +1,4 @@
-@media (max-width: 991px) {
+@media (max-width: 1023px) {
   .fc-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -42,7 +42,7 @@
     max-width: 100%;
   }
 }
-@media (max-width: 768px) {
+  @media (max-width: 767px) {
   h2.section-title {
     font-family: 'Jost', sans-serif;
     font-weight: 400;
@@ -313,7 +313,7 @@
     display: none;
   }
   .banner-grid-3 .banner-item {
-    flex: 0 0 calc(70% - 10px);
+    flex: 0 0 calc(100% - 91px);
     scroll-snap-align: start;
     border-radius: 10px;
     overflow: hidden;
@@ -344,11 +344,11 @@
   }
   .banner-grid-3 .banner-title {
     color: #111111;
-    height: 30px;
+    height: auto;
     font-family: 'Jost', sans-serif;
     font-weight: 400;
     font-size: 30px;
-    line-height: 50px;
+    line-height: 1.2;
     letter-spacing: 0%;
     margin-bottom: 25px;
   }
@@ -365,8 +365,17 @@
   }
 
   .footer-top {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 20px;
+  }
+  .footer-col {
+    min-width: 0;
+  }
+  .footer-socials {
+    flex-wrap: wrap;
+  }
+  .footer-contact p {
+    word-break: break-word;
   }
   .footer-col.accordion .footer-title {
     display: flex;
@@ -416,30 +425,37 @@
     gap: 10px;
   }
   .newsletter-form input {
-    width: 230px;
-    flex: 0 0 230px;
+    width: 100%;
+    flex: 1 1 230px;
     height: 50px;
     padding: 0 20px;
     font-size: 13px;
+    min-width: 0;
+    text-overflow: ellipsis;
   }
   .newsletter-form .btn-dark {
-    width: 150px;
-    flex: 0 0 150px;
+    width: auto;
+    flex: 0 1 150px;
     height: 50px;
-    padding: 0;
+    padding: 0 10px;
     font-size: 13px;
+    white-space: nowrap;
   }
   .footer-bottom {
     flex-direction: column;
     gap: 15px;
     text-align: center;
     padding-bottom: 100px !important; 
+    overflow: hidden;
   }
   .payment-icons {
     justify-content: center;
+    flex-wrap: wrap;
   }
   .footer-selectors {
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
   }
   .mobile-bottom-nav {
     display: flex;
@@ -906,7 +922,7 @@
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .mobile-floating-actions {
     display: none;
   }
@@ -920,3 +936,15 @@
   }
 }
 
+@media (max-width: 430px) {
+  .container { padding: 0 20px; }
+  .fc-grid { gap: 10px; }
+  .fc-card .btn { padding: 8px 15px; font-size: 13px; bottom: 15px; width: calc(100% - 20px); text-align: center; white-space: normal; }
+  h2.section-title { font-size: 28px; }
+  .hero-title { font-size: 32px; }
+  .hero-subtitle { font-size: 14px; }
+  .hero-slider-fw { height: 450px; }
+  .newsletter-form { flex-direction: row; flex-wrap: nowrap; width: 100%; gap: 8px; }
+  .newsletter-form input { flex: 1 1 auto; min-width: 0; padding: 10px 15px; font-size: 13px; width: auto; }
+  .newsletter-form .btn { flex: 0 0 auto; padding: 0 15px; font-size: 13px; margin-top: 0; width: auto; height: auto; }
+}
